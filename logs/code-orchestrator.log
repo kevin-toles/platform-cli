@@ -1,0 +1,403 @@
+INFO:     Started server process [4905]
+INFO:     Waiting for application startup.
+{"service": "code-orchestrator-service", "version": "0.1.0", "environment": "development", "event": "startup", "level": "info", "timestamp": "2026-01-11T02:23:41.697138Z"}
+{"event": "tracing_configured", "level": "info", "timestamp": "2026-01-11T02:23:41.698233Z", "service": "code-orchestrator-service"}
+{"event": "loading_sbert_model", "level": "info", "timestamp": "2026-01-11T02:23:41.698263Z", "service": "code-orchestrator-service"}
+Use pytorch device_name: mps
+Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+{"model_name": "all-MiniLM-L6-v2", "using_fallback": false, "event": "sbert_model_loader_initialized", "level": "info", "timestamp": "2026-01-11T02:23:43.799059Z", "service": "code-orchestrator-service"}
+{"event": "sbert_model_singleton_created", "level": "info", "timestamp": "2026-01-11T02:23:43.799152Z", "service": "code-orchestrator-service"}
+{"model": "all-MiniLM-L6-v2", "using_fallback": false, "event": "sbert_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:43.799180Z", "service": "code-orchestrator-service"}
+{"event": "initializing_model_wrappers", "level": "info", "timestamp": "2026-01-11T02:23:43.799205Z", "service": "code-orchestrator-service"}
+{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codebert", "event": "loading_codebert_from_local", "level": "info", "timestamp": "2026-01-11T02:23:43.799282Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "codebert_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:43.952580Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T02:23:43.952663Z", "service": "code-orchestrator-service"}
+{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/graphcodebert", "event": "loading_graphcodebert_from_local", "level": "info", "timestamp": "2026-01-11T02:23:43.952726Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:44.076653Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T02:23:44.076737Z", "service": "code-orchestrator-service"}
+{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codet5", "event": "loading_codet5_from_local", "level": "info", "timestamp": "2026-01-11T02:23:44.076801Z", "service": "code-orchestrator-service"}
+{"device": "mps", "model": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codet5", "event": "codet5_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:45.033302Z", "service": "code-orchestrator-service"}
+{"models": ["CodeBERT", "GraphCodeBERT", "CodeT5+"], "event": "model_wrappers_initialized", "level": "info", "timestamp": "2026-01-11T02:23:45.033399Z", "service": "code-orchestrator-service"}
+{"event": "all_models_ready", "level": "info", "timestamp": "2026-01-11T02:23:45.033426Z", "service": "code-orchestrator-service"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51635 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51641 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51712 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51722 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51881 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51902 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51941 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51972 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52007 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52033 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52098 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52121 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52144 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52184 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52216 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52243 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52271 - "GET /health HTTP/1.1" 200 OK
+{"event": "initializing_yake_extractor", "level": "info", "timestamp": "2026-01-11T02:31:25.447685Z", "service": "code-orchestrator-service"}
+{"event": "initializing_textrank_extractor", "level": "info", "timestamp": "2026-01-11T02:31:25.448120Z", "service": "code-orchestrator-service"}
+{"yake_count": 19, "textrank_count": 0, "merged_count": 19, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:31:25.512203Z", "service": "code-orchestrator-service"}
+{"event": "initializing_graphcodebert_validator", "level": "info", "timestamp": "2026-01-11T02:31:25.512293Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T02:31:25.515066Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:31:25.515155Z", "service": "code-orchestrator-service"}
+{"event": "initializing_codebert_ranker", "level": "info", "timestamp": "2026-01-11T02:31:25.515178Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T02:31:25.515255Z", "service": "code-orchestrator-service"}
+{"term_count": 19, "top_score": 0.9398752450942993, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:31:28.345695Z", "service": "code-orchestrator-service"}
+{"count": 19, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:31:28.347180Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52296 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52313 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52296 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52296 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52350 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 18, "textrank_count": 0, "merged_count": 18, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:31:59.349074Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:31:59.349150Z", "service": "code-orchestrator-service"}
+{"term_count": 18, "top_score": 0.9599916934967041, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:32:01.336083Z", "service": "code-orchestrator-service"}
+{"count": 18, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:32:01.336394Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52359 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52359 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52359 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:32:27.819681Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:32:27.820745Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9499589800834656, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:32:30.605269Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:32:30.606186Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52406 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52422 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52406 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52406 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52466 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:02.991607Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:02.991710Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.972963809967041, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:05.306987Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:05.307369Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 19, "textrank_count": 0, "merged_count": 19, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:07.856870Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:07.857057Z", "service": "code-orchestrator-service"}
+{"term_count": 19, "top_score": 0.9405657052993774, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:09.934198Z", "service": "code-orchestrator-service"}
+{"count": 19, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:09.934577Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:12.623977Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:12.624348Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9670569896697998, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:14.805609Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:14.805822Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:17.171008Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:17.171106Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9730329513549805, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:19.131236Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:19.131820Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T02:33:25.436195Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T02:33:25.437605Z", "service": "code-orchestrator-service"}
+{"valid_count": 26, "rejected_count": 24, "avg_similarity": 0.542, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T02:33:28.283903Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:52502 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52514 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52553 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52572 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52593 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52611 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52632 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52649 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52669 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52687 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52761 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52778 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52795 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52836 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52873 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52893 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52915 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52931 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52955 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52975 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52993 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53014 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53052 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53071 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53110 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53128 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53151 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53207 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53226 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53245 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53265 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53307 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53327 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53349 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53366 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53386 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53406 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53425 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53445 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53463 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53485 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53502 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53546 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53582 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53621 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53640 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53659 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53679 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53698 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53718 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53740 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53757 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53777 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53798 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53847 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53873 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53904 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53932 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53951 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53975 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53996 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54042 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54063 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54081 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54101 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54122 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54144 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54164 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54212 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54238 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54270 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54293 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54314 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54331 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54346 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54348 - "GET /api/v1/codebert/health HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54350 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54352 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54398 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54424 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54451 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54472 - "GET /health HTTP/1.1" 200 OK
+{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T03:19:22.984777Z", "service": "code-orchestrator-service"}
+codebert_ranker_initialized
+INFO:     127.0.0.1:54481 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54491 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54512 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54533 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54572 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54590 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54612 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54631 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54649 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54669 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54687 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54730 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54772 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54789 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54826 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54831 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54836 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54840 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54852 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54867 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54869 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54871 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54873 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54875 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54877 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54879 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54883 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54887 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54889 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54891 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54893 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54895 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54897 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54899 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54901 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54903 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54910 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54912 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54914 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54916 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54918 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54922 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54924 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54926 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54928 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54930 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54932 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54941 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54971 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54996 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55024 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55046 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55071 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55091 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55116 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55141 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55161 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55163 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55165 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55167 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55169 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55171 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55173 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55175 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55177 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55179 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55181 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55183 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55193 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55205 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55207 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55209 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55211 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55216 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55218 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55220 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55222 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55237 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55260 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55281 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55305 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55328 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55373 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55395 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55418 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55458 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55493 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55519 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55541 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55565 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55587 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55629 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55651 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55669 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55691 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55715 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55747 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55788 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55807 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55826 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55847 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55867 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55888 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55929 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55953 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55972 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56012 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56030 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56048 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56070 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56088 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56108 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56130 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56148 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56202 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56224 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56238 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56240 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56252 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56274 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56296 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56314 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56328 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56349 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56371 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56397 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56414 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56435 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56454 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56494 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56514 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56533 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56553 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56572 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56615 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56635 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56653 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56674 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56691 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56732 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56751 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56770 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56794 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56832 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56852 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56872 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56892 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56913 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56935 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56960 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56984 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57054 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57073 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57094 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57113 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57133 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57151 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57220 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57240 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57262 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57282 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57307 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57329 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57351 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57370 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57416 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57442 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57487 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57510 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57534 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57556 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57576 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57595 - "GET /health HTTP/1.1" 200 OK

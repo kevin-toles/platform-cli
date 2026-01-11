@@ -1,0 +1,651 @@
+INFO:     Started server process [4838]
+INFO:     Waiting for application startup.
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Qdrant: disconnected
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+WARNING:src.main:Neo4j: disconnected
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51522 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51534 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51557 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51584 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51611 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51639 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51660 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51684 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51694 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51704 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51719 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant health check failed: [Errno 61] Connection refused
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51730 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51880 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51889 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0))
+Failed to read four byte Bolt handshake response from server ResolvedIPv6Address(('::1', 7687, 0, 0)) (deadline Deadline(timeout=60.0))
+INFO:     127.0.0.1:51900 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0))
+Failed to read four byte Bolt handshake response from server ResolvedIPv6Address(('::1', 7687, 0, 0)) (deadline Deadline(timeout=60.0))
+INFO:     127.0.0.1:51909 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to read four byte Bolt handshake response from server ResolvedIPv6Address(('::1', 7687, 0, 0)) (deadline Deadline(timeout=60.0))
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0))
+INFO:     127.0.0.1:51937 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to read four byte Bolt handshake response from server ResolvedIPv6Address(('::1', 7687, 0, 0)) (deadline Deadline(timeout=60.0))
+Failed to read four byte Bolt handshake response from server ResolvedIPv4Address(('127.0.0.1', 7687)) (deadline Deadline(timeout=60.0))
+INFO:     127.0.0.1:51948 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51970 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Neo4j health check failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [Errno 61] Connection refused)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [Errno 61] Connection refused)
+INFO:     127.0.0.1:51980 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52014 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52006 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52040 - "GET /health HTTP/1.1" 200 OK
+WARNING:src.main:Qdrant search failed: Unexpected Response: 404 (Not Found)
+Raw response content:
+b'{"status":{"error":"Not found: Collection `all` doesn\'t exist!"},"time":0.0000585}'
+INFO:     127.0.0.1:52034 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52046 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52047 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52058 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52057 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52073 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52081 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52073 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52097 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52104 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52126 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52132 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52145 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52151 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52157 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52180 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52215 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52223 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52242 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52250 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52270 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52278 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52291 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52300 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:52291 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52299 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52300 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52291 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52309 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52319 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52361 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:52364 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52360 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52361 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52358 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52360 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52407 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52407 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52407 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52405 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52408 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52420 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52427 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52465 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:52480 - "GET /health HTTP/1.1" 200 OK
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52473 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52475 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52473 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52475 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52473 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52475 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 422 Unprocessable Content
+WARNING:neo4j.notifications:Received notification from DBMS server: <GqlStatusObject gql_status='01N42', status_description="One of the relationship types in your query is not available in the database, make sure you didn't misspell it or that the label is available when you run this statement in your application (the missing relationship type is: COVERS)", position=<SummaryInputPosition line=2, column=51, offset=63>, raw_classification='UNRECOGNIZED', classification=<NotificationClassification.UNRECOGNIZED: 'UNRECOGNIZED'>, raw_severity='WARNING', severity=<NotificationSeverity.WARNING: 'WARNING'>, diagnostic_record={'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/', '_classification': 'UNRECOGNIZED', '_severity': 'WARNING', '_position': {'column': 51, 'offset': 63, 'line': 2}}> for query: "\n            MATCH (cc:CodeConcept)-[:SAME_AS]->(c:Concept)<-[:COVERS]-(ch:Chapter)\n            WHERE toLower(cc.name) CONTAINS toLower($query)\n               OR toLower(c.name) CONTAINS toLower($query)\n            RETURN cc.name as code_concept, c.name as textbook_concept,\n                   ch.title as chapter, ch.book_id as book,\n                   'BRIDGE_SAME_AS' as relationship\n            LIMIT 5\n            "
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /v1/graph/query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52473 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52475 - "POST /v1/search/hybrid HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52511 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52519 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52531 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52538 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52552 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52559 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52571 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52578 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52591 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52598 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52612 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52618 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52630 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52637 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52650 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52656 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52667 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52675 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52694 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52719 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52726 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52737 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52745 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52759 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52766 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52777 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52785 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52793 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52804 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52815 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52823 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52835 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52842 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52853 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52861 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52872 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52880 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52891 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52899 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52913 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52920 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52928 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52939 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52956 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52962 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52973 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52981 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52992 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53000 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53013 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53020 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53032 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53039 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53051 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53058 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53077 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53097 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53109 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53125 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53150 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53157 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53169 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53176 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53188 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53195 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53208 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53214 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53227 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53233 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53246 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53252 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53264 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53284 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53292 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53306 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53315 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53325 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53348 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53355 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53365 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53374 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53385 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53393 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53405 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53413 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53424 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53432 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53442 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53451 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53460 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53470 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53481 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53491 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53501 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53510 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53522 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53529 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53543 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53564 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53570 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53589 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53599 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53619 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53627 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53639 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53646 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53658 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53665 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53681 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53686 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53697 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53705 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53716 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53724 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53737 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53745 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53758 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53764 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53783 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53795 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53803 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53811 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53822 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53843 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53853 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53869 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53879 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53902 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53911 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53931 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53938 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53948 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53956 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53974 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53982 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53994 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54003 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54015 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54026 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54037 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54047 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54058 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54068 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54079 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54088 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54107 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54121 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54129 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54145 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54151 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54163 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54171 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54186 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54195 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54211 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54218 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54239 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54246 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54269 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54277 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54290 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54298 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54319 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54332 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54338 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54364 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54373 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54397 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54404 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54421 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54429 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54450 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54457 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54467 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54477 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54487 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54498 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54508 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54518 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54529 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54538 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54552 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54557 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54567 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54586 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54596 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54606 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54616 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54626 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54648 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54655 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54667 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54675 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54695 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54705 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54714 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54729 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54736 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54747 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54756 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54777 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54790 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54796 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54808 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54851 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54858 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54940 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54950 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54970 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54978 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54994 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55002 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55023 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55030 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55045 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55052 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55068 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55076 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55098 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55114 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55121 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55142 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55148 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55194 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55200 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55234 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55243 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55255 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55265 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55277 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55286 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55303 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55326 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55349 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55358 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55378 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55400 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55413 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55423 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55437 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55444 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55454 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55463 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55475 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55482 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55495 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55502 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55518 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55525 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55542 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55563 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55571 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55586 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55593 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55607 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55615 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55628 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55635 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55649 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55656 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55666 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55675 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55690 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55697 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55712 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55722 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55748 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55755 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55765 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55786 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55793 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55802 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55827 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55833 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55843 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55868 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55884 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55893 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55906 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55912 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55924 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55935 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55948 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55958 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55967 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55977 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55991 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55997 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56007 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56017 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56029 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56047 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56055 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56068 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56075 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56085 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56094 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56105 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56113 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56128 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56146 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56157 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56167 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56178 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56207 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56222 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56230 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56257 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56270 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56292 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56301 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56324 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56335 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56351 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56356 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56370 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56377 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56395 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56403 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56413 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56423 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56436 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56442 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56461 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56473 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56481 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56492 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56500 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56513 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56520 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56540 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56552 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56559 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56571 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56579 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56596 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56602 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56614 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56621 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56631 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56641 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56649 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56660 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56673 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56681 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56689 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56700 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56719 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56729 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56758 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56771 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56778 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56789 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56799 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56809 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56828 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56839 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56850 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56858 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56871 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56879 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56891 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56898 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56919 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56932 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56941 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56959 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56966 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56983 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56991 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57025 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57033 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57044 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57053 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57063 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57071 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57082 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57093 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57101 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57112 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57131 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57139 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57148 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57158 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57172 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57177 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57188 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57221 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57227 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57238 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57246 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57258 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57268 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57286 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57291 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57305 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57313 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57325 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57335 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57350 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57358 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57369 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57378 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57393 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57400 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57417 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57424 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57441 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57449 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57462 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57471 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57483 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57494 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57505 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57515 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57533 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57540 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57561 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57571 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57581 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57591 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57601 - "GET /health HTTP/1.1" 200 OK

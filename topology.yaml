@@ -1,0 +1,67 @@
+version: '1.0'
+modes:
+  docker:
+    qdrant: docker
+    llm-gateway: docker
+    semantic-search: docker
+    code-orchestrator: docker
+    inference: docker
+  hybrid:
+    qdrant: docker
+    llm-gateway: docker
+    semantic-search: docker
+    code-orchestrator: docker
+    inference: native
+  native:
+    qdrant: docker
+    llm-gateway: native
+    semantic-search: native
+    code-orchestrator: native
+    inference: native
+services:
+  qdrant:
+    path: qdrant
+    port: 6333
+    health_endpoint: /healthz
+    start:
+      docker: docker compose up -d
+    depends_on: []
+  inference:
+    path: inference-service
+    port: 8085
+    health_endpoint: /health
+    start:
+      docker: docker compose up -d
+      native: source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0
+        --port 8085
+    env:
+      INFERENCE_MODELS_DIR: /Users/kevintoles/POC/ai-models/models
+      INFERENCE_CONFIG_DIR: /Users/kevintoles/POC/inference-service/config
+      INFERENCE_GPU_LAYERS: '-1'
+      INFERENCE_DEFAULT_PRESET: ''
+    depends_on: []
+  llm-gateway:
+    path: llm-gateway
+    port: 8080
+    health_endpoint: /health
+    start:
+      docker: docker compose up -d
+    depends_on:
+    - inference
+  semantic-search:
+    path: semantic-search-service
+    port: 8084
+    health_endpoint: /health
+    start:
+      docker: docker compose up -d
+    depends_on:
+    - qdrant
+  code-orchestrator:
+    path: Code-Orchestrator-Service
+    port: 8083
+    health_endpoint: /health
+    start:
+      docker: docker compose up -d
+    depends_on:
+    - llm-gateway
+    - semantic-search

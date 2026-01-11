@@ -1,0 +1,1961 @@
+INFO:     Started server process [4890]
+INFO:     Waiting for application startup.
+{"logger": "src.main", "service": "inference-service", "version": "0.1.0", "environment": "development", "port": 8085, "event": "Application starting", "level": "info", "timestamp": "2026-01-11T02:23:27.487013Z"}
+{"logger": "src.main", "event": "No default preset configured - set INFERENCE_DEFAULT_PRESET to auto-load models", "level": "info", "timestamp": "2026-01-11T02:23:27.543847Z"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8085 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51554 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51582 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51609 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51658 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51716 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51718 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51878 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51898 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51933 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51965 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52027 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52075 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52091 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52116 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52139 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52175 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52214 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52241 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52273 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52289 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52306 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52326 - "POST /v1/chat/completions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52344 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52372 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52372 - "GET /v1/models HTTP/1.1" 200 OK
+ggml_metal_init: skipping kernel_get_rows_bf16                     (not supported)
+ggml_metal_init: skipping kernel_set_rows_bf16                     (not supported)
+ggml_metal_init: skipping kernel_mul_mv_bf16_f32                   (not supported)
+ggml_metal_init: skipping kernel_mul_mv_bf16_f32_c4                (not supported)
+ggml_metal_init: skipping kernel_mul_mv_bf16_f32_1row              (not supported)
+ggml_metal_init: skipping kernel_mul_mv_bf16_f32_l4                (not supported)
+ggml_metal_init: skipping kernel_mul_mv_bf16_bf16                  (not supported)
+ggml_metal_init: skipping kernel_mul_mv_id_bf16_f32                (not supported)
+ggml_metal_init: skipping kernel_mul_mm_bf16_f32                   (not supported)
+ggml_metal_init: skipping kernel_mul_mm_id_bf16_f16                (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h64           (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h80           (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h96           (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h112          (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h128          (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h192          (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_hk192_hv128   (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_h256          (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_bf16_hk576_hv512   (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_h64       (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_h96       (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_h128      (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_h192      (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_hk192_hv128 (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_h256      (not supported)
+ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_hk576_hv512 (not supported)
+ggml_metal_init: skipping kernel_cpy_f32_bf16                      (not supported)
+ggml_metal_init: skipping kernel_cpy_bf16_f32                      (not supported)
+ggml_metal_init: skipping kernel_cpy_bf16_bf16                     (not supported)
+INFO:     127.0.0.1:52372 - "POST /v1/models/codellama-7b-instruct/load HTTP/1.1" 200 OK
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52372 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52387 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52372 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52387 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52372 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52387 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52396 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52397 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52397 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52396 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:52418 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52440 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52397 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52396 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52440 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52440 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52448 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52449 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52449 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52448 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52449 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52448 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:52463 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52489 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52489 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52489 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
+Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
+    result = await asyncio.to_thread(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
+    return handler(
+        llama=self,
+    ...<27 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
+    completion_or_chunks = llama.create_completion(
+        prompt=prompt,
+    ...<21 lines>...
+        logit_bias=logit_bias,
+    )
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
+    completion: Completion = next(completion_or_chunks)  # type: ignore
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
+    for token in self.generate(
+                 ~~~~~~~~~~~~~^
+        prompt_tokens,
+        ^^^^^^^^^^^^^^
+    ...<14 lines>...
+        grammar=grammar,
+        ^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
+    self.eval(tokens)
+    ~~~~~~~~~^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
+    self._ctx.decode(self._batch)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
+    raise RuntimeError(f"llama_decode returned {return_code}")
+RuntimeError: llama_decode returned -3
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
+    response: ChatCompletionResponse = await provider.generate(completion_request)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
+    raise LlamaCppInferenceError(
+        f"Generation failed for {self._model_id}: {e}"
+    ) from e
+src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
+INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:52510 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52529 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52569 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52588 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52609 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52628 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52668 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52717 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52735 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52758 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52776 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52791 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52833 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52852 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52875 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52890 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52911 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52933 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52954 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52974 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52995 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53011 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53031 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53050 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53070 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53087 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53108 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53124 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53144 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53168 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53186 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53201 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53225 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53243 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53262 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53286 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53329 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53369 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53388 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53407 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53427 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53441 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53464 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53478 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53503 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53521 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53539 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53560 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53596 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53620 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53657 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53677 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53700 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53715 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53738 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53754 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53776 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53794 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53809 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53840 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53868 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53901 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53930 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53945 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53971 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53998 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54020 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54057 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54075 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54098 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54119 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54142 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54159 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54183 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54210 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54233 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54272 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54308 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54327 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54360 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54419 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54448 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54465 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54485 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54505 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54543 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54566 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54602 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54622 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54646 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54664 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54701 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54727 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54743 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54764 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54785 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54804 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54849 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54939 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54972 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55022 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55044 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55067 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55092 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55113 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55134 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55187 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55252 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55272 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55301 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55320 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55344 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55365 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55388 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55409 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55435 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55452 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55470 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55488 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55516 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55534 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55609 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55624 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55646 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55668 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55689 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55742 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55769 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55780 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55806 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55820 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55848 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55861 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55883 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55901 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55922 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55949 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55966 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55987 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56023 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56062 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56087 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56104 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56123 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56152 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56172 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56193 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56223 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56243 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56290 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56330 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56392 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56417 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56433 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56455 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56476 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56491 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56509 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56529 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56570 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56589 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56607 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56630 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56647 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56668 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56694 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56713 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56734 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56749 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56765 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56786 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56805 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56826 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56849 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56889 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56906 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56928 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56957 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56978 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57012 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57058 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57091 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57115 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57130 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57146 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57164 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57192 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57215 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57239 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57255 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57301 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57322 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57352 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57372 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57412 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57440 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57458 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57489 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57504 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57528 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57552 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57568 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57589 - "GET /health HTTP/1.1" 200 OK

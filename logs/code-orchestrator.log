@@ -1,403 +1,1495 @@
-INFO:     Started server process [4905]
+INFO:     Started server process [3428]
 INFO:     Waiting for application startup.
-{"service": "code-orchestrator-service", "version": "0.1.0", "environment": "development", "event": "startup", "level": "info", "timestamp": "2026-01-11T02:23:41.697138Z"}
-{"event": "tracing_configured", "level": "info", "timestamp": "2026-01-11T02:23:41.698233Z", "service": "code-orchestrator-service"}
-{"event": "loading_sbert_model", "level": "info", "timestamp": "2026-01-11T02:23:41.698263Z", "service": "code-orchestrator-service"}
+{"service": "code-orchestrator-service", "version": "0.1.0", "environment": "development", "event": "startup", "level": "info", "timestamp": "2026-01-11T17:26:02.620393Z"}
+{"event": "tracing_configured", "level": "info", "timestamp": "2026-01-11T17:26:02.621531Z", "service": "code-orchestrator-service"}
+{"event": "loading_sbert_model", "level": "info", "timestamp": "2026-01-11T17:26:02.621563Z", "service": "code-orchestrator-service"}
 Use pytorch device_name: mps
 Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-{"model_name": "all-MiniLM-L6-v2", "using_fallback": false, "event": "sbert_model_loader_initialized", "level": "info", "timestamp": "2026-01-11T02:23:43.799059Z", "service": "code-orchestrator-service"}
-{"event": "sbert_model_singleton_created", "level": "info", "timestamp": "2026-01-11T02:23:43.799152Z", "service": "code-orchestrator-service"}
-{"model": "all-MiniLM-L6-v2", "using_fallback": false, "event": "sbert_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:43.799180Z", "service": "code-orchestrator-service"}
-{"event": "initializing_model_wrappers", "level": "info", "timestamp": "2026-01-11T02:23:43.799205Z", "service": "code-orchestrator-service"}
-{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codebert", "event": "loading_codebert_from_local", "level": "info", "timestamp": "2026-01-11T02:23:43.799282Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "codebert_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:43.952580Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T02:23:43.952663Z", "service": "code-orchestrator-service"}
-{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/graphcodebert", "event": "loading_graphcodebert_from_local", "level": "info", "timestamp": "2026-01-11T02:23:43.952726Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "graphcodebert_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:44.076653Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T02:23:44.076737Z", "service": "code-orchestrator-service"}
-{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codet5", "event": "loading_codet5_from_local", "level": "info", "timestamp": "2026-01-11T02:23:44.076801Z", "service": "code-orchestrator-service"}
-{"device": "mps", "model": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codet5", "event": "codet5_model_loaded", "level": "info", "timestamp": "2026-01-11T02:23:45.033302Z", "service": "code-orchestrator-service"}
-{"models": ["CodeBERT", "GraphCodeBERT", "CodeT5+"], "event": "model_wrappers_initialized", "level": "info", "timestamp": "2026-01-11T02:23:45.033399Z", "service": "code-orchestrator-service"}
-{"event": "all_models_ready", "level": "info", "timestamp": "2026-01-11T02:23:45.033426Z", "service": "code-orchestrator-service"}
+{"model_name": "all-MiniLM-L6-v2", "using_fallback": false, "event": "sbert_model_loader_initialized", "level": "info", "timestamp": "2026-01-11T17:26:04.688555Z", "service": "code-orchestrator-service"}
+{"event": "sbert_model_singleton_created", "level": "info", "timestamp": "2026-01-11T17:26:04.688707Z", "service": "code-orchestrator-service"}
+{"model": "all-MiniLM-L6-v2", "using_fallback": false, "event": "sbert_model_loaded", "level": "info", "timestamp": "2026-01-11T17:26:04.688755Z", "service": "code-orchestrator-service"}
+{"event": "initializing_model_wrappers", "level": "info", "timestamp": "2026-01-11T17:26:04.688823Z", "service": "code-orchestrator-service"}
+{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codebert", "event": "loading_codebert_from_local", "level": "info", "timestamp": "2026-01-11T17:26:04.688930Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "codebert_model_loaded", "level": "info", "timestamp": "2026-01-11T17:26:04.847243Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T17:26:04.847309Z", "service": "code-orchestrator-service"}
+{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/graphcodebert", "event": "loading_graphcodebert_from_local", "level": "info", "timestamp": "2026-01-11T17:26:04.847366Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_model_loaded", "level": "info", "timestamp": "2026-01-11T17:26:04.965831Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T17:26:04.965897Z", "service": "code-orchestrator-service"}
+{"path": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codet5", "event": "loading_codet5_from_local", "level": "info", "timestamp": "2026-01-11T17:26:04.965963Z", "service": "code-orchestrator-service"}
+{"device": "mps", "model": "/Users/kevintoles/POC/Code-Orchestrator-Service/models/codet5", "event": "codet5_model_loaded", "level": "info", "timestamp": "2026-01-11T17:26:06.002671Z", "service": "code-orchestrator-service"}
+{"models": ["CodeBERT", "GraphCodeBERT", "CodeT5+"], "event": "model_wrappers_initialized", "level": "info", "timestamp": "2026-01-11T17:26:06.002763Z", "service": "code-orchestrator-service"}
+{"event": "all_models_ready", "level": "info", "timestamp": "2026-01-11T17:26:06.002794Z", "service": "code-orchestrator-service"}
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
-INFO:     127.0.0.1:51635 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51641 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51662 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51712 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51722 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51881 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51902 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51941 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49694 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49735 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49890 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49930 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49977 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50009 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50058 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50082 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50147 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50194 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50221 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50246 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50265 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50313 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50375 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50395 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50414 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50433 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50456 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50494 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50512 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50550 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50631 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50674 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50693 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50766 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50803 - "GET /health HTTP/1.1" 200 OK
+{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T17:54:46.587442Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T17:54:46.588799Z", "service": "code-orchestrator-service"}
+{"valid_count": 9, "rejected_count": 41, "avg_similarity": 0.577, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T17:54:49.289937Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50824 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50833 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50855 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50871 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50894 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50919 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50937 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50956 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50977 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50999 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51024 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51055 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51073 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51093 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51115 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51138 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51159 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51177 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51195 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51233 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51265 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51288 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51322 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51345 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51370 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51395 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51421 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51445 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51467 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51488 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51508 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51528 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51546 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51565 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51589 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51626 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51647 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51678 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51703 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51729 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51748 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51795 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51817 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51856 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51883 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51906 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51928 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51952 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:51972 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52007 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52033 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52074 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52098 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52121 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52144 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52184 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52216 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52243 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52271 - "GET /health HTTP/1.1" 200 OK
-{"event": "initializing_yake_extractor", "level": "info", "timestamp": "2026-01-11T02:31:25.447685Z", "service": "code-orchestrator-service"}
-{"event": "initializing_textrank_extractor", "level": "info", "timestamp": "2026-01-11T02:31:25.448120Z", "service": "code-orchestrator-service"}
-{"yake_count": 19, "textrank_count": 0, "merged_count": 19, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:31:25.512203Z", "service": "code-orchestrator-service"}
-{"event": "initializing_graphcodebert_validator", "level": "info", "timestamp": "2026-01-11T02:31:25.512293Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T02:31:25.515066Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:31:25.515155Z", "service": "code-orchestrator-service"}
-{"event": "initializing_codebert_ranker", "level": "info", "timestamp": "2026-01-11T02:31:25.515178Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T02:31:25.515255Z", "service": "code-orchestrator-service"}
-{"term_count": 19, "top_score": 0.9398752450942993, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:31:28.345695Z", "service": "code-orchestrator-service"}
-{"count": 19, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:31:28.347180Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52296 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52313 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52296 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52296 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:52350 - "GET /health HTTP/1.1" 200 OK
-{"yake_count": 18, "textrank_count": 0, "merged_count": 18, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:31:59.349074Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:31:59.349150Z", "service": "code-orchestrator-service"}
-{"term_count": 18, "top_score": 0.9599916934967041, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:32:01.336083Z", "service": "code-orchestrator-service"}
-{"count": 18, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:32:01.336394Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52359 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52359 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52359 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:32:27.819681Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:32:27.820745Z", "service": "code-orchestrator-service"}
-{"term_count": 20, "top_score": 0.9499589800834656, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:32:30.605269Z", "service": "code-orchestrator-service"}
-{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:32:30.606186Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52406 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52422 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52406 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52406 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:52466 - "GET /health HTTP/1.1" 200 OK
-{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:02.991607Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:02.991710Z", "service": "code-orchestrator-service"}
-{"term_count": 20, "top_score": 0.972963809967041, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:05.306987Z", "service": "code-orchestrator-service"}
-{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:05.307369Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-{"yake_count": 19, "textrank_count": 0, "merged_count": 19, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:07.856870Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:07.857057Z", "service": "code-orchestrator-service"}
-{"term_count": 19, "top_score": 0.9405657052993774, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:09.934198Z", "service": "code-orchestrator-service"}
-{"count": 19, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:09.934577Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:12.623977Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:12.624348Z", "service": "code-orchestrator-service"}
-{"term_count": 20, "top_score": 0.9670569896697998, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:14.805609Z", "service": "code-orchestrator-service"}
-{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:14.805822Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T02:33:17.171008Z", "service": "code-orchestrator-service"}
-{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T02:33:17.171106Z", "service": "code-orchestrator-service"}
-{"term_count": 20, "top_score": 0.9730329513549805, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T02:33:19.131236Z", "service": "code-orchestrator-service"}
-{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T02:33:19.131820Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52476 - "POST /v1/search HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /api/v1/keywords HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52476 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
-{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T02:33:25.436195Z", "service": "code-orchestrator-service"}
-{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T02:33:25.437605Z", "service": "code-orchestrator-service"}
-{"valid_count": 26, "rejected_count": 24, "avg_similarity": 0.542, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T02:33:28.283903Z", "service": "code-orchestrator-service"}
-INFO:     127.0.0.1:52502 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52514 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51997 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52025 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52047 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52075 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52127 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52188 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52214 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52235 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52257 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52284 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52331 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52378 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52404 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52426 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52446 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52468 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52486 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52532 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52553 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52572 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52593 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52611 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52632 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52649 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52669 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52687 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52720 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52739 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52761 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52588 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52640 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52640 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52690 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52718 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52740 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52778 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52795 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52809 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52841 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52863 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52885 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52904 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52937 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52965 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52995 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53016 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53042 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53072 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53094 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53112 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53132 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53153 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53178 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53206 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53234 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53305 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53362 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53380 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53398 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53418 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53439 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53458 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53477 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53493 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53512 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53540 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53540 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53587 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53613 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53646 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53675 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53695 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53713 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53731 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53754 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53770 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53797 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53836 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53897 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53919 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53938 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53962 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53982 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54023 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54044 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54063 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54081 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54119 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54140 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54160 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54177 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54229 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54256 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54316 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54345 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54365 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54397 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54421 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54447 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54464 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54478 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54497 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54511 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54530 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54545 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54568 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54599 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54611 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54631 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54643 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54661 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54677 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54693 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54724 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54738 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54756 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54784 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54796 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54830 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54843 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54859 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54875 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54890 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54921 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54937 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54951 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54965 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54980 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55010 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55026 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55040 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55057 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55070 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55084 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55130 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55144 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55165 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55179 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55212 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55230 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55251 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55270 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55286 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55304 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55319 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55332 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55363 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55379 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55393 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55405 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55424 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55437 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55452 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55468 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55478 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55493 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55506 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55533 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55599 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55613 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55626 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55642 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55656 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55668 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55681 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55696 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55721 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55740 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55771 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55785 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55797 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55815 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55827 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55841 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55855 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55867 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55883 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55897 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55912 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55925 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55938 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55950 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55962 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55974 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55989 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56002 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56016 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56027 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56040 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56054 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56067 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56079 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56095 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56106 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56118 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56133 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56145 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56159 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56176 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56191 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56203 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56218 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56231 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56244 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56258 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56270 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56296 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56318 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56336 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56349 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56363 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56376 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56388 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56402 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56414 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56428 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56440 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56480 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56492 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56503 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56519 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56541 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56559 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56570 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56597 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56611 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56626 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56640 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56656 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56669 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56679 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56692 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56722 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56737 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56764 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56777 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56791 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56800 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56815 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56830 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56843 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56858 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56872 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56884 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56895 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56910 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56924 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56938 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56950 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56968 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56983 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56995 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57011 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57022 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57050 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57064 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57103 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57149 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57167 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57179 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57197 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57213 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57226 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57240 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57254 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57267 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57300 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57313 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57328 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57341 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57356 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57369 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57382 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57396 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57409 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57421 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57434 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57451 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57464 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57479 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57494 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57509 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57535 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57551 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57566 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57585 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57661 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57678 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57711 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57732 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57751 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57780 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57801 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57858 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57905 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57949 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57973 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57994 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58054 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58089 - "GET /health HTTP/1.1" 200 OK
+{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T19:31:48.486223Z", "service": "code-orchestrator-service"}
+{"valid_count": 24, "rejected_count": 26, "avg_similarity": 0.568, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T19:31:51.135121Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:58115 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58124 - "GET /health HTTP/1.1" 200 OK
+{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T19:32:23.265466Z", "service": "code-orchestrator-service"}
+{"valid_count": 24, "rejected_count": 26, "avg_similarity": 0.574, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T19:32:24.649210Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:58168 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58179 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58209 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58247 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58275 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58299 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58326 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58344 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58370 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58388 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58414 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58444 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58475 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58499 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58525 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58553 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58572 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58594 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58617 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58639 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58666 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58700 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58723 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58753 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58779 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58805 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58827 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58846 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58865 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58885 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58907 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58931 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58951 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58971 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59000 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59056 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59084 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59109 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59129 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59149 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59168 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59213 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59233 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59249 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59290 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59330 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59357 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59376 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59397 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59416 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59461 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59482 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59501 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59520 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59630 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59655 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59684 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59707 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59729 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59747 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59768 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59787 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59836 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59858 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59877 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59897 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59916 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59936 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59954 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59976 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59995 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60021 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60048 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60097 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60116 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60139 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60163 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60190 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60210 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60253 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60303 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60321 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60344 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60359 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60388 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60413 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60487 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60507 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60527 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60547 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60570 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60591 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60615 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60644 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60668 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60697 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60727 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60781 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60807 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60829 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60868 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60911 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60937 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60959 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60982 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61003 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61041 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61056 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61080 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61096 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61120 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61155 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61180 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61204 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61229 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61272 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61314 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61345 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61365 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61422 - "GET /health HTTP/1.1" 200 OK
+{"event": "initializing_yake_extractor", "level": "info", "timestamp": "2026-01-11T20:41:35.534673Z", "service": "code-orchestrator-service"}
+{"event": "initializing_textrank_extractor", "level": "info", "timestamp": "2026-01-11T20:41:35.537878Z", "service": "code-orchestrator-service"}
+{"yake_count": 20, "textrank_count": 12, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:41:35.682280Z", "service": "code-orchestrator-service"}
+{"event": "initializing_graphcodebert_validator", "level": "info", "timestamp": "2026-01-11T20:41:35.682386Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "graphcodebert_validator_initialized", "level": "info", "timestamp": "2026-01-11T20:41:35.686023Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:41:35.686248Z", "service": "code-orchestrator-service"}
+{"event": "initializing_codebert_ranker", "level": "info", "timestamp": "2026-01-11T20:41:35.686284Z", "service": "code-orchestrator-service"}
+{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T20:41:35.687177Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9504444599151611, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:41:41.139417Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:41:41.142555Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61455 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61469 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61455 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61455 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 11, "textrank_count": 0, "merged_count": 11, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:41:43.957927Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:41:43.958140Z", "service": "code-orchestrator-service"}
+{"term_count": 11, "top_score": 0.9645363688468933, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:41:45.612925Z", "service": "code-orchestrator-service"}
+{"count": 11, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:41:45.617159Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61455 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61500 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61455 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61455 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61563 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61585 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61604 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61624 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 9, "textrank_count": 0, "merged_count": 9, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:44:45.431625Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:44:45.433065Z", "service": "code-orchestrator-service"}
+{"term_count": 9, "top_score": 0.9889475703239441, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:44:48.126901Z", "service": "code-orchestrator-service"}
+{"count": 9, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:44:48.127942Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61641 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61656 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 2, "textrank_count": 0, "merged_count": 2, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:44:50.849988Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:44:50.850170Z", "service": "code-orchestrator-service"}
+{"term_count": 2, "top_score": 0.9410008192062378, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:44:51.837061Z", "service": "code-orchestrator-service"}
+{"count": 2, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:44:51.837480Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61641 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61641 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 11, "merged_count": 28, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:44:57.741796Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:44:57.742398Z", "service": "code-orchestrator-service"}
+{"term_count": 28, "top_score": 0.9468181133270264, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:45:02.346139Z", "service": "code-orchestrator-service"}
+{"count": 28, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:45:02.347446Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61676 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 12, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:45:07.412216Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:45:07.412416Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9460028409957886, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:45:11.669394Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:45:11.670043Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61676 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61676 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61705 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61725 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61746 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61770 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:46:40.065633Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:46:40.066182Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9477991461753845, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:46:43.451586Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:46:43.452408Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61791 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61791 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61791 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61834 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61857 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61880 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61898 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61916 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61937 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 9, "textrank_count": 0, "merged_count": 9, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:50:14.789447Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:50:14.789851Z", "service": "code-orchestrator-service"}
+{"term_count": 9, "top_score": 0.9889475703239441, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:50:16.936584Z", "service": "code-orchestrator-service"}
+{"count": 9, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:50:16.942168Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61950 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61966 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 2, "textrank_count": 0, "merged_count": 2, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:50:19.806459Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:50:19.806612Z", "service": "code-orchestrator-service"}
+{"term_count": 2, "top_score": 0.9410008192062378, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:50:20.725446Z", "service": "code-orchestrator-service"}
+{"count": 2, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:50:20.726074Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61950 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 11, "merged_count": 28, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:50:25.635041Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:50:25.635875Z", "service": "code-orchestrator-service"}
+{"term_count": 28, "top_score": 0.9468181133270264, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:50:30.419005Z", "service": "code-orchestrator-service"}
+{"count": 28, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:50:30.421445Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61950 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 12, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:50:35.485302Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:50:35.485451Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9460028409957886, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:50:39.662234Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:50:39.662681Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:61950 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61950 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62011 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62033 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:51:47.654654Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:51:47.655018Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:51:50.404442Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:51:50.406290Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62055 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62070 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62055 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62055 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:51:54.629022Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:51:54.629220Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:51:57.650798Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:51:57.651192Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62055 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62055 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62055 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:52:01.572240Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:52:01.572484Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.947236180305481, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:52:04.332630Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:52:04.333019Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62055 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62055 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62055 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 13, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:52:10.413753Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:52:10.413966Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9424519538879395, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:52:15.201442Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:52:15.203783Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62106 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62106 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62106 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62126 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62149 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62168 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62194 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62250 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62268 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 9, "textrank_count": 0, "merged_count": 9, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:55:43.096692Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:55:43.097895Z", "service": "code-orchestrator-service"}
+{"term_count": 9, "top_score": 0.9889475703239441, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:55:45.554513Z", "service": "code-orchestrator-service"}
+{"count": 9, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:55:45.557159Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62281 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 2, "textrank_count": 0, "merged_count": 2, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:55:48.692092Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:55:48.692249Z", "service": "code-orchestrator-service"}
+{"term_count": 2, "top_score": 0.9410008192062378, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:55:49.431861Z", "service": "code-orchestrator-service"}
+{"count": 2, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:55:49.432264Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62281 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62301 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 10, "merged_count": 28, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:55:54.767764Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:55:54.768133Z", "service": "code-orchestrator-service"}
+{"term_count": 28, "top_score": 0.9466525912284851, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:55:59.269059Z", "service": "code-orchestrator-service"}
+{"count": 28, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:55:59.270514Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62313 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62313 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62333 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62313 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 12, "merged_count": 30, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:56:04.298405Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:56:04.298597Z", "service": "code-orchestrator-service"}
+{"term_count": 30, "top_score": 0.946500301361084, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:56:08.792816Z", "service": "code-orchestrator-service"}
+{"count": 30, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:56:08.794369Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62313 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62361 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62313 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62313 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62389 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62406 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:57:19.567491Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:57:19.567809Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:57:22.906388Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:57:22.907870Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62423 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:57:27.291305Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:57:27.291711Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:57:30.090839Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:57:30.092728Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62423 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:57:34.223173Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:57:34.223405Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.947236180305481, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:57:37.000600Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:57:37.001095Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62423 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62423 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62458 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 13, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T20:57:43.020138Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T20:57:43.020541Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9424519538879395, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T20:57:47.092425Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T20:57:47.092924Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62470 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62489 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62470 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62470 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62518 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62539 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62556 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62576 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62594 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62616 - "GET /health HTTP/1.1" 200 OK
+{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T21:01:08.848840Z", "service": "code-orchestrator-service"}
+{"valid_count": 11, "rejected_count": 39, "avg_similarity": 0.561, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T21:01:11.773590Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62625 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62638 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62658 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62676 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62697 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T21:02:51.670482Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T21:02:51.670671Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9399409294128418, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T21:02:55.051840Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T21:02:55.052916Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62707 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62707 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62707 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62729 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T21:02:59.295508Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T21:02:59.295733Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9428882598876953, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T21:03:02.217373Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T21:03:02.217759Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62707 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62707 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62707 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62757 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T21:03:06.316710Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T21:03:06.316827Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9403414726257324, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T21:03:09.069651Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T21:03:09.070344Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:62707 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62707 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62707 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:62793 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62834 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62851 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62873 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62893 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62912 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62932 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62954 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62971 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62994 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63017 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63044 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63065 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63094 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63117 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63143 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63192 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63219 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63241 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63263 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63304 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63321 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63342 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63360 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63386 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63405 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63425 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63445 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63485 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63542 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63607 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63627 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63645 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63670 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63690 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63730 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63749 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63787 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63809 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63828 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63874 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63896 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63916 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63934 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63953 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63971 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64010 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64028 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64047 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64072 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64129 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64151 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64169 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64191 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64208 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64229 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64250 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64290 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64310 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64328 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64367 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64387 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64405 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64425 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64453 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64476 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64496 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64516 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64534 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64553 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64571 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64592 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64610 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64628 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64651 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64672 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64692 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64712 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64730 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64770 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64791 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64810 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64829 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64849 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64872 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64891 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64910 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64949 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64976 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65002 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65023 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65045 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65102 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65144 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65174 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65191 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65219 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65241 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65264 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65291 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65318 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65377 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65419 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:03:52.238970Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:03:52.240484Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9477991461753845, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:03:55.604691Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:03:55.605919Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:65444 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65444 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65444 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:65472 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65494 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65515 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49152 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 5, "textrank_count": 0, "merged_count": 5, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:05:59.272327Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:05:59.274137Z", "service": "code-orchestrator-service"}
+{"term_count": 5, "top_score": 0.9930906295776367, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:06:01.382609Z", "service": "code-orchestrator-service"}
+{"count": 5, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:06:01.384269Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49168 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49184 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 3, "textrank_count": 0, "merged_count": 3, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:06:04.462063Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:06:04.462270Z", "service": "code-orchestrator-service"}
+{"term_count": 3, "top_score": 0.9999998807907104, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:06:04.970297Z", "service": "code-orchestrator-service"}
+{"count": 3, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:06:04.970699Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49168 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:06:09.579376Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:06:09.579873Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:06:12.107130Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:06:12.107686Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49168 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:06:16.258867Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:06:16.259082Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:06:18.731667Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:06:18.732693Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49168 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49168 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49229 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49250 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49271 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49293 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49314 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:09:02.205908Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:09:02.206526Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9477991461753845, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:09:05.693337Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:09:05.695152Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49336 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49336 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49336 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49394 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 9, "textrank_count": 0, "merged_count": 9, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:09:52.571548Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:09:52.573363Z", "service": "code-orchestrator-service"}
+{"term_count": 9, "top_score": 0.9897743463516235, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:09:55.167319Z", "service": "code-orchestrator-service"}
+{"count": 9, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:09:55.169338Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49409 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 3, "textrank_count": 0, "merged_count": 3, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:09:58.357938Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:09:58.358118Z", "service": "code-orchestrator-service"}
+{"term_count": 3, "top_score": 1.0, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:09:59.318347Z", "service": "code-orchestrator-service"}
+{"count": 3, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:09:59.318922Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49409 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:10:03.836967Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:10:03.837432Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:10:07.117011Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:10:07.117687Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49409 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49433 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:10:11.628547Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:10:11.629209Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:10:14.324964Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:10:14.327151Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49409 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49409 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49477 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49495 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 5, "textrank_count": 0, "merged_count": 5, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:21.955635Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:21.956594Z", "service": "code-orchestrator-service"}
+{"term_count": 5, "top_score": 0.9930906295776367, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:11:23.785998Z", "service": "code-orchestrator-service"}
+{"count": 5, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:11:23.786996Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49511 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 3, "textrank_count": 0, "merged_count": 3, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:27.159864Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:27.160601Z", "service": "code-orchestrator-service"}
+{"term_count": 3, "top_score": 0.9999998807907104, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:11:28.820198Z", "service": "code-orchestrator-service"}
+{"count": 3, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:11:28.830742Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49511 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+{"yake_count": 9, "textrank_count": 0, "merged_count": 9, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:31.343225Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:31.343357Z", "service": "code-orchestrator-service"}
+{"term_count": 9, "top_score": 0.9897743463516235, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:11:33.827142Z", "service": "code-orchestrator-service"}
+{"count": 9, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:11:33.829191Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49522 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49522 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49539 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:38.287361Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:38.287492Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:11:41.205114Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:11:41.207879Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49511 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49522 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49511 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+{"yake_count": 3, "textrank_count": 0, "merged_count": 3, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:44.385163Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:44.385417Z", "service": "code-orchestrator-service"}
+{"term_count": 3, "top_score": 1.0, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:11:45.340484Z", "service": "code-orchestrator-service"}
+{"count": 3, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:11:45.342712Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49522 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49522 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:49.937391Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:49.937795Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:11:52.764775Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:11:52.765469Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49511 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49522 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49511 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:11:57.269598Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:11:57.269761Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:12:00.184726Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:12:00.186616Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49522 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49522 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49522 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:12:04.487183Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:12:04.487389Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:12:06.766331Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:12:06.766790Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49522 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49522 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49522 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49618 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49651 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 6, "textrank_count": 0, "merged_count": 6, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:13:09.553781Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:13:09.554052Z", "service": "code-orchestrator-service"}
+{"term_count": 6, "top_score": 0.9924276471138, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:13:10.812065Z", "service": "code-orchestrator-service"}
+{"count": 6, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:13:10.814410Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49683 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 3, "textrank_count": 0, "merged_count": 3, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:13:13.895055Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:13:13.895396Z", "service": "code-orchestrator-service"}
+{"term_count": 3, "top_score": 0.9735680818557739, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:13:14.480340Z", "service": "code-orchestrator-service"}
+{"count": 3, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:13:14.481533Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49683 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:13:19.011855Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:13:19.012252Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9399409294128418, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:13:21.793167Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:13:21.795129Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49683 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:13:26.083964Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:13:26.084153Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9428882598876953, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:13:29.692058Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:13:29.694480Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49683 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49683 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49732 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49763 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49823 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:14:46.256185Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:14:46.256623Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9477991461753845, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:14:50.911882Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:14:50.914218Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49840 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49840 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:15:02.849327Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:15:02.850332Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:15:06.612871Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:15:06.614941Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49873 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49873 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49873 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49889 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:15:12.409015Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:15:12.409452Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:15:16.429075Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:15:16.433084Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49900 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49900 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49900 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:15:20.406025Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:15:20.406573Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.947236180305481, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:15:24.279060Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:15:24.280097Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49900 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49900 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49900 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 13, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:15:30.717765Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:15:30.718376Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9424519538879395, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:15:36.222106Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:15:36.223243Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49923 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49923 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49923 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49955 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:15:48.038864Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:15:48.039201Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9406032562255859, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:15:51.357670Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:15:51.358492Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49975 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:15:55.414994Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:15:55.415268Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9411478042602539, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:15:58.208618Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:15:58.210865Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49975 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:16:02.089927Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:16:02.090273Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.947236180305481, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:16:04.694824Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:16:04.697135Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:49975 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 13, "merged_count": 29, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:16:10.510803Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:16:10.511004Z", "service": "code-orchestrator-service"}
+{"term_count": 29, "top_score": 0.9424519538879395, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:16:14.674678Z", "service": "code-orchestrator-service"}
+{"count": 29, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:16:14.675451Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50011 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50026 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50011 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:16:26.855663Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:16:26.856031Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9399409294128418, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:16:30.864947Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:16:30.868763Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50062 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:16:35.014825Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:16:35.015160Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9428882598876953, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:16:37.820768Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:16:37.821951Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50062 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:16:41.654122Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:16:41.654417Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9403414726257324, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:16:44.170694Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:16:44.171362Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50062 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50062 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50105 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 5, "textrank_count": 0, "merged_count": 5, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:17:07.614192Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:17:07.615167Z", "service": "code-orchestrator-service"}
+{"term_count": 5, "top_score": 0.9930906295776367, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:17:08.720366Z", "service": "code-orchestrator-service"}
+{"count": 5, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:17:08.722654Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50136 - "POST /v1/search HTTP/1.1" 200 OK
+{"term_count": 50, "event": "graphcodebert_validate_request", "level": "info", "timestamp": "2026-01-11T22:17:08.732860Z", "service": "code-orchestrator-service"}
+{"valid_count": 12, "rejected_count": 38, "avg_similarity": 0.567, "event": "validation_complete", "level": "info", "timestamp": "2026-01-11T22:17:11.258355Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50138 - "POST /v1/graphcodebert/validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 6, "textrank_count": 0, "merged_count": 6, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:17:14.238144Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:17:14.238276Z", "service": "code-orchestrator-service"}
+{"term_count": 6, "top_score": 0.9999998807907104, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:17:15.898192Z", "service": "code-orchestrator-service"}
+{"count": 6, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:17:15.898788Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50136 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50162 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:17:20.461479Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:17:20.462173Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9399409294128418, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:17:23.055708Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:17:23.056539Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50136 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:17:27.421083Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:17:27.421356Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9428882598876953, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:17:30.984425Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:17:30.986538Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50136 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50136 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50210 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50230 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:18:20.333146Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:18:20.333480Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9503400921821594, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:18:22.980583Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:18:22.981860Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50250 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50250 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50250 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50275 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50294 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50313 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50352 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50374 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50394 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50415 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50443 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50467 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:23:27.415176Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:23:27.415883Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9630669355392456, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:23:31.937129Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:23:31.938057Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50485 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:23:35.994635Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:23:35.995111Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9480215311050415, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:23:38.716071Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:23:38.717087Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50485 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:23:42.636071Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:23:42.636405Z", "service": "code-orchestrator-service"}
+{"term_count": 20, "top_score": 0.9482250809669495, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:23:45.437120Z", "service": "code-orchestrator-service"}
+{"count": 20, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:23:45.438204Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50485 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50523 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 13, "merged_count": 32, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:23:52.433276Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:23:52.433649Z", "service": "code-orchestrator-service"}
+{"term_count": 32, "top_score": 0.9497557282447815, "event": "codebert_ranking_complete", "level": "info", "timestamp": "2026-01-11T22:23:58.213691Z", "service": "code-orchestrator-service"}
+{"count": 32, "event": "codebert_ranked_terms", "level": "info", "timestamp": "2026-01-11T22:23:58.214922Z", "service": "code-orchestrator-service"}
+INFO:     127.0.0.1:50535 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50554 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50535 - "POST /api/v1/keywords HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50535 - "POST /v1/extract/terms HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50582 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50624 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50653 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50677 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50691 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50705 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50721 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50730 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50745 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50759 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50786 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50799 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50826 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50839 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50859 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50870 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50885 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50896 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50910 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50924 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50950 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50964 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51002 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51031 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51045 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51057 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51070 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51084 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51101 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51118 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51132 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51145 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51160 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51185 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51202 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51214 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51228 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51241 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51254 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51268 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51300 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51324 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51339 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51351 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51365 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51380 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51392 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51405 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51418 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51428 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51444 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51456 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51469 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51483 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51496 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51508 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51522 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51535 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51545 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51576 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51590 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51602 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51614 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51644 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51654 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51671 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51698 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51728 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51792 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51820 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51850 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51864 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51878 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51889 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51905 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51917 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51930 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51945 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51958 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51968 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51985 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52016 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52027 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52038 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52056 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52082 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52098 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52110 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52123 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52139 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52151 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52166 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52180 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52189 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52204 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52217 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52231 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52245 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52261 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52276 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52289 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52303 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52317 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52331 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52385 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52399 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52412 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52425 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52451 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52464 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52480 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52492 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52506 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52519 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52538 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52552 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52565 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52578 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52597 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52609 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52652 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52666 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52696 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52725 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52755 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52783 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52796 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52810 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52824 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52836 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52854 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52873 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52893 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52915 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:52931 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52955 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52975 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52993 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53014 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53034 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53052 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53071 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53092 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53110 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53128 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53151 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53170 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53189 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53207 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53226 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53245 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53265 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53285 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53307 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53327 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53349 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53366 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53386 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53406 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53425 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53445 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53463 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53485 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53502 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53523 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53546 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53562 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53582 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53603 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53621 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53640 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53659 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53679 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53698 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53718 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53740 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53757 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53777 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53798 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53813 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53847 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53873 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53904 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53932 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53951 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53975 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53996 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54018 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54042 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54063 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54081 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54101 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54122 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54144 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54164 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54189 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54212 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54238 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54270 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54293 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54314 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54331 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54346 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54348 - "GET /api/v1/codebert/health HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:54350 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54352 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54368 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54398 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54424 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54451 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54472 - "GET /health HTTP/1.1" 200 OK
-{"device": "cpu", "event": "codebert_ranker_initialized", "level": "info", "timestamp": "2026-01-11T03:19:22.984777Z", "service": "code-orchestrator-service"}
-codebert_ranker_initialized
-INFO:     127.0.0.1:54481 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54491 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54512 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54533 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54548 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54572 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54590 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54612 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54631 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54649 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54669 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54687 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54708 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54730 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54750 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54772 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54789 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54813 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54826 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54831 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54836 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54840 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54852 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54867 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54869 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54871 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54873 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54875 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54877 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54879 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54883 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54885 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54887 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54889 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54891 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54893 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54895 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54897 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54899 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54901 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54903 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54905 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54910 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54912 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54914 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54916 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54918 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54920 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54922 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54924 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54926 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54928 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54930 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54932 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54941 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54971 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54996 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55024 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55046 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55071 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55091 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55116 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55141 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55161 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55163 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55165 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55167 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55169 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55171 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55173 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55175 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55177 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55179 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55181 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55183 - "POST /api/v1/codebert/similarity HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55193 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55205 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55207 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55209 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55211 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55216 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55218 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55220 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55222 - "POST /api/v1/codebert/embed HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55237 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55260 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55281 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55305 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55328 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55353 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55373 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55395 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55418 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55438 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55458 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55474 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55493 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55519 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55541 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55565 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55587 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55608 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55629 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55651 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55669 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55691 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55715 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55747 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55767 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55788 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55807 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55826 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55847 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55867 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55888 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55905 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55929 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55953 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55972 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55990 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56012 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56030 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56048 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56070 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56088 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56108 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56130 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56148 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56170 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56202 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56224 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56238 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56240 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56252 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56274 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56296 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56314 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56328 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56349 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56371 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56397 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56414 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56435 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56454 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56474 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56494 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56514 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56533 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56553 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56572 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56595 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56615 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56635 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56653 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56674 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56691 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56710 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56732 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56751 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56770 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56794 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56813 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56832 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56852 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56872 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56892 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56913 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56935 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56960 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56984 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57019 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57036 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57054 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57073 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57094 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57113 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57133 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57151 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57170 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57189 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57220 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57240 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57262 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57282 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57307 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57329 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57351 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57370 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57394 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57416 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57442 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57466 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57487 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57510 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57534 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57556 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57576 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57595 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52958 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52980 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52998 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53019 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53038 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53057 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53074 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53098 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53118 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53137 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53158 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53177 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53195 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53217 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53232 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53255 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53274 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53293 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53315 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53342 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53373 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53390 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53413 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53432 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53459 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53477 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53534 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53554 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53602 - "GET /health HTTP/1.1" 200 OK
+{"yake_count": 20, "textrank_count": 0, "merged_count": 20, "event": "ensemble_generated_terms", "level": "info", "timestamp": "2026-01-11T22:43:37.833264Z", "service": "code-orchestrator-service"}
+{"error": "GraphCodeBERTValidator.validate_terms() got an unexpected keyword argument 'query_context'", "event": "graphcodebert_validation_failed", "level": "warning", "timestamp": "2026-01-11T22:43:37.837962Z", "service": "code-orchestrator-service"}

@@ -1,37 +1,585 @@
-INFO:     Started server process [4890]
+INFO:     Started server process [3409]
 INFO:     Waiting for application startup.
-{"logger": "src.main", "service": "inference-service", "version": "0.1.0", "environment": "development", "port": 8085, "event": "Application starting", "level": "info", "timestamp": "2026-01-11T02:23:27.487013Z"}
-{"logger": "src.main", "event": "No default preset configured - set INFERENCE_DEFAULT_PRESET to auto-load models", "level": "info", "timestamp": "2026-01-11T02:23:27.543847Z"}
+{"logger": "src.main", "service": "inference-service", "version": "0.1.0", "environment": "development", "port": 8085, "event": "Application starting", "level": "info", "timestamp": "2026-01-11T17:25:47.091587Z"}
+{"logger": "src.main", "event": "No default preset configured - set INFERENCE_DEFAULT_PRESET to auto-load models", "level": "info", "timestamp": "2026-01-11T17:25:47.148790Z"}
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8085 (Press CTRL+C to quit)
-INFO:     127.0.0.1:51548 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51554 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51582 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51609 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51636 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51658 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51716 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51718 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49652 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49886 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49927 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49945 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49974 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50003 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50030 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50055 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50079 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50094 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50149 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50193 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50224 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50258 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50276 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50308 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50335 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50349 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50371 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50392 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50415 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50435 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50450 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50471 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50486 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50511 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50529 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50552 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50629 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50668 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50691 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50713 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50732 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50762 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50799 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50829 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50847 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50865 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50891 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50910 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50930 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50954 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50974 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50992 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51020 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51050 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51092 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51108 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51133 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51155 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51175 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51194 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51231 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51259 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51318 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51364 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51397 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51420 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51439 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51469 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51484 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51505 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51567 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51586 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51624 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51648 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51675 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51731 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51768 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51791 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51818 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51838 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51858 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:51878 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51898 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51933 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51904 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51922 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51945 - "GET /health HTTP/1.1" 200 OK
 INFO:     127.0.0.1:51965 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52004 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52027 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52075 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52091 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52116 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52139 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52175 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52214 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52241 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52273 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52289 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52306 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52326 - "POST /v1/chat/completions HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:52344 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52372 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52372 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52018 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52045 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52072 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52096 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52125 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52186 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52211 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52232 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52253 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52281 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52308 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52333 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52348 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52380 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52401 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52423 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52444 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52481 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52507 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52527 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52567 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52584 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52635 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52635 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52710 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52807 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52836 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52859 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52878 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52901 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52928 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52962 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52992 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53014 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53041 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53068 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53107 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53134 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53155 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53175 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53203 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53226 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53303 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53354 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53377 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53400 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53416 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53455 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53475 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53497 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53515 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53537 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53537 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53566 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53582 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53608 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53641 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53671 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53706 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53725 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53795 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53829 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53848 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53870 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53893 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53912 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53933 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53960 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53976 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54003 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54021 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54037 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54061 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54083 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54099 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54116 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54156 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54178 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54194 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54222 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54248 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54273 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54288 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54312 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54346 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54363 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54398 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54417 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54443 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54461 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54471 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54493 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54503 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54540 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54560 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54575 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54598 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54612 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54627 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54637 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54658 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54675 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54702 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54731 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54751 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54762 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54783 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54799 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54828 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54841 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54852 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54871 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54885 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54899 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54917 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54929 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54948 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54967 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54982 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54997 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55011 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55023 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55039 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55053 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55072 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55079 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55101 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55131 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55139 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55161 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55175 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55192 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55215 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55227 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55245 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55269 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55285 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55301 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55317 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55330 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55360 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55377 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55389 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55408 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55418 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55431 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55447 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55463 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55476 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55492 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55503 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55521 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55535 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55543 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55556 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55578 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55592 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55612 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55619 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55638 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55651 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55670 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55678 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55694 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55704 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55749 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55765 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55776 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55795 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55812 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55823 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55837 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55846 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55871 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55881 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55891 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55916 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55929 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55942 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55960 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55970 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55983 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55996 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56010 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56020 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56042 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56051 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56075 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56090 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56107 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56121 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56126 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56143 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56156 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56187 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56206 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56217 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56233 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56246 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56257 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56272 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56280 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56297 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56331 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56359 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56368 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56385 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56394 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56411 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56420 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56434 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56448 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56461 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56486 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56498 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56513 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56545 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56550 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56564 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56594 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56614 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56628 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56642 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56654 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56695 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56709 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56724 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56739 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56763 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56775 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56789 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56799 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56816 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56834 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56847 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56859 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56871 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56886 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56899 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56906 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56923 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56931 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56945 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56965 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56985 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56991 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57006 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57026 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57038 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57046 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57057 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57077 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57083 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57114 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57132 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57146 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57160 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57182 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57198 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57210 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57227 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57242 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57256 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57269 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57281 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57292 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57308 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57322 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57338 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57352 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57370 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57383 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57393 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57408 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57423 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57436 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57453 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57488 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57507 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57522 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57553 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57553 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57578 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57637 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57657 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57707 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57728 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57745 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57781 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57794 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57814 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57849 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57869 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57909 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57947 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57968 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57989 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58012 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58036 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58055 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58085 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58127 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58172 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58200 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58219 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58239 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58269 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58300 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58317 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58364 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58382 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58410 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58440 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58469 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58498 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58523 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58549 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58570 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58587 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58613 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58641 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58663 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58698 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58718 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58798 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58825 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58845 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58864 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58883 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58903 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58928 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58952 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58967 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58996 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59015 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59033 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59053 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59078 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59101 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59121 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59150 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59165 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59191 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59209 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59226 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59253 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59266 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59284 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59307 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59327 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59350 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59370 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59393 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59418 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59434 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59464 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59476 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59498 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59521 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59574 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59604 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59629 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59652 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59682 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59698 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59746 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59761 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59781 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59805 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59833 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59878 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59895 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59913 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59934 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59958 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59969 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59998 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60016 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60072 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60093 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60109 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60137 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60165 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60184 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60205 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60225 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60245 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60274 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60298 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60318 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60335 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60355 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60384 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60406 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60436 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60464 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60485 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60505 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60524 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60544 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60562 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60583 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60613 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60636 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60663 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60689 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60721 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60746 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60771 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60799 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60824 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60864 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60903 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60939 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60954 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60973 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60997 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61014 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61032 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61053 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61073 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61113 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61149 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61172 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61195 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61222 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61252 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61268 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61294 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61294 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61301 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61303 - "POST /v1/chat/completions HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61309 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61338 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61356 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61385 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61409 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61411 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61425 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61443 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61443 - "GET /v1/models HTTP/1.1" 200 OK
+llama_context: n_ctx_per_seq (32768) < n_ctx_train (131072) -- the full capacity of the model will not be utilized
 ggml_metal_init: skipping kernel_get_rows_bf16                     (not supported)
 ggml_metal_init: skipping kernel_set_rows_bf16                     (not supported)
 ggml_metal_init: skipping kernel_mul_mv_bf16_f32                   (not supported)
@@ -61,1901 +609,279 @@ ggml_metal_init: skipping kernel_flash_attn_ext_vec_bf16_hk576_hv512 (not suppor
 ggml_metal_init: skipping kernel_cpy_f32_bf16                      (not supported)
 ggml_metal_init: skipping kernel_cpy_bf16_f32                      (not supported)
 ggml_metal_init: skipping kernel_cpy_bf16_bf16                     (not supported)
-INFO:     127.0.0.1:52372 - "POST /v1/models/codellama-7b-instruct/load HTTP/1.1" 200 OK
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52372 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52387 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52372 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52387 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52372 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52387 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52396 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52397 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52397 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52396 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:52418 - "GET /health HTTP/1.1" 200 OK
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52440 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52397 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52396 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52440 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52440 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52448 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52449 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52449 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52448 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52449 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52448 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:52463 - "GET /health HTTP/1.1" 200 OK
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52489 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52489 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-Graceful degradation: 'gemini-2.0-flash-001' not loaded, using 'codellama-7b-instruct'
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52489 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-decode: removing KV cache entries for seq_id = 0, pos = [0, +inf)
-Inference error: Generation failed for codellama-7b-instruct: llama_decode returned -3
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 339, in generate
-    result = await asyncio.to_thread(
-             ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/threads.py", line 25, in to_thread
-    return await loop.run_in_executor(None, func_call)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 2003, in create_chat_completion
-    return handler(
-        llama=self,
-    ...<27 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama_chat_format.py", line 669, in chat_completion_handler
-    completion_or_chunks = llama.create_completion(
-        prompt=prompt,
-    ...<21 lines>...
-        logit_bias=logit_bias,
-    )
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1837, in create_completion
-    completion: Completion = next(completion_or_chunks)  # type: ignore
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 1322, in _create_completion
-    for token in self.generate(
-                 ~~~~~~~~~~~~~^
-        prompt_tokens,
-        ^^^^^^^^^^^^^^
-    ...<14 lines>...
-        grammar=grammar,
-        ^^^^^^^^^^^^^^^^
-    ):
-    ^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 914, in generate
-    self.eval(tokens)
-    ~~~~~~~~~^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/llama.py", line 648, in eval
-    self._ctx.decode(self._batch)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/.venv/lib/python3.13/site-packages/llama_cpp/_internals.py", line 327, in decode
-    raise RuntimeError(f"llama_decode returned {return_code}")
-RuntimeError: llama_decode returned -3
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/Users/kevintoles/POC/inference-service/src/api/routes/completions.py", line 174, in create_chat_completion
-    response: ChatCompletionResponse = await provider.generate(completion_request)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/kevintoles/POC/inference-service/src/providers/llamacpp.py", line 351, in generate
-    raise LlamaCppInferenceError(
-        f"Generation failed for {self._model_id}: {e}"
-    ) from e
-src.providers.llamacpp.LlamaCppInferenceError: Generation failed for codellama-7b-instruct: llama_decode returned -3
-INFO:     127.0.0.1:52488 - "POST /v1/chat/completions HTTP/1.1" 500 Internal Server Error
-INFO:     127.0.0.1:52510 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52529 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52551 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52569 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52588 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52609 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52628 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52647 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52668 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52682 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52717 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52735 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52758 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52776 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52791 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52818 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52833 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52852 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52875 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52890 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52911 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52933 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52954 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52974 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52995 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53011 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53031 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53050 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53070 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53087 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53108 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53124 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53144 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53168 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53186 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53201 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53225 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53243 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53262 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53286 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53310 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53329 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53347 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53369 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53388 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53407 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53427 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53441 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53464 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53478 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53503 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53521 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53539 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53560 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53577 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53596 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53620 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53636 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53657 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53677 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53700 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53715 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53738 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53754 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53776 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53794 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53809 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53840 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53868 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53901 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53930 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53945 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53971 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53998 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54020 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54034 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54057 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54075 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54098 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54119 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54142 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54159 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54183 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54210 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54233 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54272 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54285 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54308 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54327 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54360 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54396 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54419 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54448 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54465 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54485 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54505 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54525 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54543 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54566 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54583 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54602 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54622 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54646 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54664 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54682 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54701 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54727 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54743 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54764 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54785 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54804 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54849 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54939 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54972 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54990 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55022 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55044 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55067 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55092 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55113 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55134 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55187 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55228 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55252 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55272 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55301 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55320 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55344 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55365 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55388 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55409 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55435 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55452 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55470 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55488 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55516 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55534 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55562 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55583 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55609 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55624 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55646 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55668 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55689 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55710 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55742 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55769 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55780 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55806 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55820 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55848 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55861 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55883 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55901 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55922 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55949 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55966 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55987 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56004 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56023 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56042 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56062 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56087 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56104 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56123 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56152 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56172 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56193 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56223 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56243 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56271 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56290 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56330 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56347 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56368 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56392 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56417 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56433 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56455 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56476 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56491 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56509 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56529 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56550 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56570 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56589 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56607 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56630 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56647 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56668 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56694 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56713 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56734 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56749 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56765 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56786 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56805 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56826 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56849 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56874 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56889 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56906 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56928 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56957 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56978 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57012 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57037 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57058 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57069 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57091 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57115 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57130 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57146 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57164 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57192 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57215 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57239 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57255 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57280 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57301 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57322 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57352 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57372 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57390 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57412 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57440 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57458 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57489 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57504 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57528 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57552 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57568 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57589 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61443 - "POST /v1/models/qwen2.5-coder-7b/load HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61466 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61497 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:61529 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61515 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61558 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61516 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61517 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61621 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61518 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61653 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:61703 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61723 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61743 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61767 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61784 - "GET /v1/models HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:61813 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61692 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61833 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61854 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61876 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61895 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61914 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61693 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61933 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61963 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:62009 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62034 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62048 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62065 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:62123 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62146 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62188 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'qwen2.5-7b' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:62224 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62245 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62265 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62299 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62329 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62357 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:62385 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62405 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62455 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62485 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:62511 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62535 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62559 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62574 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62597 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62607 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62634 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62650 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62669 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62691 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62750 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:62792 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62812 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62825 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62850 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62865 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62889 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62907 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62927 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62947 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62966 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62217 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63014 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63039 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63057 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63087 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63110 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63145 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63164 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63186 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63213 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63232 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63256 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63277 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63296 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63315 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63334 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63353 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63378 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63398 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63423 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63437 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63458 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63477 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63496 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63516 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63540 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63557 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63621 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63641 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63662 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63687 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63707 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63726 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63747 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63766 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63784 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63805 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63824 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63851 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63869 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63893 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63910 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63930 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63950 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63968 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63987 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64006 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64025 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64043 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64063 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64103 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64124 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64143 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64162 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64182 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64203 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64222 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64243 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64264 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64289 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64306 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64322 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64342 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64359 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64380 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64402 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64421 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64447 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64467 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64490 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64507 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64530 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64548 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64567 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64603 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64626 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64649 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64666 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64690 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64707 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64727 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64747 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64768 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64782 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64803 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64824 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64845 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64868 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64885 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64904 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64941 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64970 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64994 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65015 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65040 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65069 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65100 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65136 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65170 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65186 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65217 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65239 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65260 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65315 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65343 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65374 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65395 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65417 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65438 - "GET /v1/models HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:65467 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65456 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65491 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65458 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65513 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65459 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65532 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65460 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49181 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:49226 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49247 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49269 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49287 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49214 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49307 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49331 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49351 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49391 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49215 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49430 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49473 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49493 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49216 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49536 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:49616 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49648 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49670 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49731 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49760 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49585 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49820 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49835 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49886 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49952 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50023 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50102 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49586 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50159 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:50202 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50224 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50242 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50242 - "GET /v1/models HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:50272 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50291 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50311 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50328 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50347 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50373 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50391 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50412 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:50438 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50459 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50490 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50520 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50550 - "GET /health HTTP/1.1" 200 OK
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+Graceful degradation: 'deepseek-coder-v2-lite' not loaded, using 'qwen2.5-coder-7b'
+INFO:     127.0.0.1:50577 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50598 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50620 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50637 - "GET /v1/models HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50649 - "GET /health HTTP/1.1" 200 OK

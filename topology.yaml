@@ -65,3 +65,40 @@ services:
     depends_on:
     - llm-gateway
     - semantic-search
+  audit-service:
+    path: audit-service
+    port: 8086
+    health_endpoint: /health
+    start:
+      docker: docker compose up -d
+      native: source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8086
+    env:
+      SONARCLOUD_TOKEN: ${SONARCLOUD_TOKEN}
+      SONARQUBE_WEBHOOK_SECRET: ${SONARQUBE_WEBHOOK_SECRET}
+      GITHUB_WEBHOOK_SECRET: ${GITHUB_WEBHOOK_SECRET}
+      QDRANT_URL: http://localhost:6333
+      SEMANTIC_SEARCH_URL: http://localhost:8084
+    depends_on:
+    - qdrant
+    - semantic-search
+
+# Cron jobs for continuous ingestion pipeline
+# WBS-CDP8: Continuous Ingestion Pipeline
+cron_jobs:
+  # AC-8.3: Daily poll SonarCloud for resolved issues
+  poll_sonarcloud:
+    schedule: "0 2 * * *"  # Daily at 2 AM
+    command: "cd /Users/kevintoles/POC/audit-service && source .venv/bin/activate && python -m scripts.poll_sonarcloud"
+    description: "Poll SonarCloud for newly resolved issues"
+    
+  # AC-8.4: Weekly scan git commits for pattern fixes
+  scan_git_commits:
+    schedule: "0 3 * * 0"  # Weekly on Sunday at 3 AM
+    command: "cd /Users/kevintoles/POC/audit-service && source .venv/bin/activate && python -m scripts.scan_git_commits --days 7"
+    description: "Scan git repositories for fix commits"
+    
+  # AC-8.5: Hourly process staged instances to Qdrant
+  process_staged:
+    schedule: "30 * * * *"  # Hourly at :30
+    command: "cd /Users/kevintoles/POC/audit-service && source .venv/bin/activate && python -m scripts.process_staged_instances --clear-after"
+    description: "Embed staged pattern instances to Qdrant"

@@ -34,6 +34,10 @@ TOPOLOGY_FILE = PLATFORM_ROOT / "platform-cli" / "topology.yaml"
 PID_DIR = PLATFORM_ROOT / "platform-cli" / ".pids"
 LOG_DIR = PLATFORM_ROOT / "platform-cli" / "logs"
 
+# S1192: Extracted string literals to constants
+DEFAULT_HEALTH_ENDPOINT = "/health"
+DOCKER_COMPOSE_UP_CMD = "docker compose up -d"
+
 # Colors
 GREEN = "\033[0;32m"
 RED = "\033[0;31m"
@@ -78,7 +82,7 @@ class PlatformManager:
         """Load topology.yaml configuration."""
         if not TOPOLOGY_FILE.exists():
             print(f"{RED}Error: topology.yaml not found at {TOPOLOGY_FILE}{NC}")
-            print(f"Run: platform init")
+            print("Run: platform init")
             sys.exit(1)
         
         with open(TOPOLOGY_FILE) as f:
@@ -92,7 +96,7 @@ class PlatformManager:
                 name=name,
                 path=PLATFORM_ROOT / config["path"],
                 port=config["port"],
-                health_endpoint=config.get("health_endpoint", "/health"),
+                health_endpoint=config.get("health_endpoint", DEFAULT_HEALTH_ENDPOINT),
                 start_command=config.get("start", {}),
                 depends_on=config.get("depends_on", []),
                 env=config.get("env", {}),
@@ -184,8 +188,6 @@ class PlatformManager:
         if existing_pid:
             print(f"    {YELLOW}Port {service.port} already in use (PID {existing_pid}){NC}")
             return True
-        
-        log_file = LOG_DIR / f"{service.name}.log"
         
         try:
             # Run docker compose up -d
@@ -585,16 +587,16 @@ def init_topology():
                 "port": 6333,
                 "health_endpoint": "/healthz",
                 "start": {
-                    "docker": "docker compose up -d",
+                    "docker": DOCKER_COMPOSE_UP_CMD,
                 },
                 "depends_on": [],
             },
             "inference": {
                 "path": "inference-service",
                 "port": 8085,
-                "health_endpoint": "/health",
+                "health_endpoint": DEFAULT_HEALTH_ENDPOINT,
                 "start": {
-                    "docker": "docker compose up -d",
+                    "docker": DOCKER_COMPOSE_UP_CMD,
                     "native": "source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8085",
                 },
                 "env": {
@@ -608,27 +610,27 @@ def init_topology():
             "llm-gateway": {
                 "path": "llm-gateway",
                 "port": 8080,
-                "health_endpoint": "/health",
+                "health_endpoint": DEFAULT_HEALTH_ENDPOINT,
                 "start": {
-                    "docker": "docker compose up -d",
+                    "docker": DOCKER_COMPOSE_UP_CMD,
                 },
                 "depends_on": ["inference"],
             },
             "semantic-search": {
                 "path": "semantic-search-service",
                 "port": 8084,
-                "health_endpoint": "/health",
+                "health_endpoint": DEFAULT_HEALTH_ENDPOINT,
                 "start": {
-                    "docker": "docker compose up -d",
+                    "docker": DOCKER_COMPOSE_UP_CMD,
                 },
                 "depends_on": ["qdrant"],
             },
             "code-orchestrator": {
                 "path": "Code-Orchestrator-Service",
                 "port": 8083,
-                "health_endpoint": "/health",
+                "health_endpoint": DEFAULT_HEALTH_ENDPOINT,
                 "start": {
-                    "docker": "docker compose up -d",
+                    "docker": DOCKER_COMPOSE_UP_CMD,
                 },
                 "depends_on": ["llm-gateway", "semantic-search"],
             },
@@ -641,8 +643,8 @@ def init_topology():
         yaml.dump(topology, f, default_flow_style=False, sort_keys=False)
     
     print(f"{GREEN}Created {TOPOLOGY_FILE}{NC}")
-    print(f"\nEdit this file to customize your platform topology.")
-    print(f"Then run: platform up --mode=hybrid")
+    print("\nEdit this file to customize your platform topology.")
+    print("Then run: platform up --mode=hybrid")
 
 
 if __name__ == "__main__":

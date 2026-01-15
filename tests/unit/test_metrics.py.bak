@@ -1,0 +1,245 @@
+"""
+Unit tests for Prometheus metrics - WBS-LOG3.3
+
+Tests that the metrics module:
+- Exports service_health_status gauge
+- Updates metrics from health aggregator results
+- Exposes /metrics endpoint in Prometheus format
+
+Technical Debt: Uses mocked health aggregator results, resolved in WBS-LOG4 (E2E integration)
+"""
+import pytest
+from unittest.mock import AsyncMock, patch, MagicMock
+from prometheus_client import REGISTRY, CollectorRegistry
+
+
+class TestPrometheusMetrics:
+    """Test suite for Prometheus metrics."""
+
+    @pytest.fixture(autouse=True)
+    def reset_registry(self):
+        """Reset metrics between tests to avoid duplicate registration errors."""
+        # This is needed because prometheus_client uses a global registry
+        yield
+        # Cleanup happens in the metrics module
+
+    @pytest.fixture
+    def metrics_module(self):
+        """Import metrics module with fresh registry."""
+        from src import metrics
+        return metrics
+
+    def test_service_health_status_gauge_exists(self, metrics_module):
+        """AC-LOG3.2: service_health_status gauge is defined."""
+        assert hasattr(metrics_module, 'SERVICE_HEALTH_STATUS')
+        assert metrics_module.SERVICE_HEALTH_STATUS is not None
+
+    def test_service_health_status_has_service_label(self, metrics_module):
+        """AC-LOG3.2: service_health_status has 'service' label."""
+        gauge = metrics_module.SERVICE_HEALTH_STATUS
+        # Set a value to verify the label works
+        gauge.labels(service="ai-agents").set(1)
+        
+        # Verify the metric can be read with the label
+        sample_value = gauge.labels(service="ai-agents")._value.get()
+        assert sample_value == 1
+
+    def test_service_health_latency_gauge_exists(self, metrics_module):
+        """AC-LOG3.2: service_health_latency_ms gauge is defined."""
+        assert hasattr(metrics_module, 'SERVICE_HEALTH_LATENCY')
+        assert metrics_module.SERVICE_HEALTH_LATENCY is not None
+
+    def test_update_metrics_sets_healthy_status(self, metrics_module):
+        """AC-LOG3.2: update_metrics sets status=1 for healthy services."""
+        health_result = {
+            "status": "healthy",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {
+                "ai-agents": {"status": "healthy", "latency_ms": 45},
+            }
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        status_value = metrics_module.SERVICE_HEALTH_STATUS.labels(service="ai-agents")._value.get()
+        assert status_value == 1.0
+
+    def test_update_metrics_sets_unhealthy_status(self, metrics_module):
+        """AC-LOG3.2: update_metrics sets status=0 for unhealthy services."""
+        health_result = {
+            "status": "degraded",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {
+                "code-orchestrator": {"status": "unhealthy", "error": "connection refused"},
+            }
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        status_value = metrics_module.SERVICE_HEALTH_STATUS.labels(service="code-orchestrator")._value.get()
+        assert status_value == 0.0
+
+    def test_update_metrics_sets_latency(self, metrics_module):
+        """AC-LOG3.2: update_metrics sets latency_ms for services."""
+        health_result = {
+            "status": "healthy",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {
+                "inference-service": {"status": "healthy", "latency_ms": 23.5},
+            }
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        latency_value = metrics_module.SERVICE_HEALTH_LATENCY.labels(service="inference-service")._value.get()
+        assert latency_value == 23.5
+
+    def test_update_metrics_handles_all_six_services(self, metrics_module):
+        """AC-LOG3.2: update_metrics handles all 6 services."""
+        health_result = {
+            "status": "degraded",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {
+                "ai-agents": {"status": "healthy", "latency_ms": 45},
+                "inference-service": {"status": "healthy", "latency_ms": 23},
+                "llm-gateway": {"status": "healthy", "latency_ms": 12},
+                "semantic-search": {"status": "healthy", "latency_ms": 34},
+                "audit-service": {"status": "healthy", "latency_ms": 18},
+                "code-orchestrator": {"status": "unhealthy", "error": "connection refused"},
+            }
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        # Verify each service has a metric
+        for service_name in health_result["services"]:
+            status_value = metrics_module.SERVICE_HEALTH_STATUS.labels(service=service_name)._value.get()
+            assert status_value in [0.0, 1.0]
+
+    def test_platform_health_status_gauge(self, metrics_module):
+        """AC-LOG3.2: platform_health_status aggregate gauge exists."""
+        assert hasattr(metrics_module, 'PLATFORM_HEALTH_STATUS')
+        
+        # Test values: healthy=1, degraded=0.5, unhealthy=0
+        metrics_module.PLATFORM_HEALTH_STATUS.set(1.0)
+        assert metrics_module.PLATFORM_HEALTH_STATUS._value.get() == 1.0
+
+    def test_update_metrics_sets_platform_status_healthy(self, metrics_module):
+        """AC-LOG3.2: Sets platform status to 1 when healthy."""
+        health_result = {
+            "status": "healthy",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {}
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        assert metrics_module.PLATFORM_HEALTH_STATUS._value.get() == 1.0
+
+    def test_update_metrics_sets_platform_status_degraded(self, metrics_module):
+        """AC-LOG3.2: Sets platform status to 0.5 when degraded."""
+        health_result = {
+            "status": "degraded",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {}
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        assert metrics_module.PLATFORM_HEALTH_STATUS._value.get() == 0.5
+
+    def test_update_metrics_sets_platform_status_unhealthy(self, metrics_module):
+        """AC-LOG3.2: Sets platform status to 0 when unhealthy."""
+        health_result = {
+            "status": "unhealthy",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {}
+        }
+        
+        metrics_module.update_metrics(health_result)
+        
+        assert metrics_module.PLATFORM_HEALTH_STATUS._value.get() == 0.0
+
+
+class TestMetricsAPI:
+    """Test the /metrics endpoint."""
+
+    @pytest.fixture
+    def client(self):
+        """Create test client for the metrics API."""
+        from fastapi.testclient import TestClient
+        from src.metrics import create_metrics_app
+        
+        app = create_metrics_app()
+        return TestClient(app)
+
+    def test_metrics_endpoint_exists(self, client):
+        """AC-LOG3.2: /metrics endpoint is accessible."""
+        response = client.get("/metrics")
+        assert response.status_code == 200
+
+    def test_metrics_endpoint_returns_prometheus_format(self, client):
+        """AC-LOG3.2: /metrics returns Prometheus text format."""
+        response = client.get("/metrics")
+        
+        # Prometheus format starts with # HELP or metric names
+        content = response.text
+        assert "service_health_status" in content or "# HELP" in content
+
+    def test_metrics_content_type(self, client):
+        """AC-LOG3.2: /metrics returns correct content type."""
+        response = client.get("/metrics")
+        
+        content_type = response.headers.get("content-type", "")
+        assert "text/plain" in content_type or "text/plain; version=0.0.4" in content_type
+
+
+class TestMetricsCollector:
+    """Test the background metrics collection."""
+
+    @pytest.fixture
+    def metrics_module(self):
+        """Import metrics module."""
+        from src import metrics
+        return metrics
+
+    @pytest.mark.asyncio
+    async def test_collect_metrics_calls_health_aggregator(self, metrics_module):
+        """AC-LOG3.2: collect_metrics polls health aggregator."""
+        mock_result = {
+            "status": "healthy",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {
+                "ai-agents": {"status": "healthy", "latency_ms": 45},
+            }
+        }
+        
+        with patch.object(metrics_module, 'get_aggregator') as mock_get_agg:
+            mock_aggregator = AsyncMock()
+            mock_aggregator.check_all.return_value = mock_result
+            mock_get_agg.return_value = mock_aggregator
+            
+            await metrics_module.collect_metrics()
+            
+            mock_aggregator.check_all.assert_called_once()
+
+    @pytest.mark.asyncio
+    async def test_collect_metrics_updates_gauges(self, metrics_module):
+        """AC-LOG3.2: collect_metrics updates Prometheus gauges."""
+        mock_result = {
+            "status": "healthy",
+            "timestamp": "2026-01-14T12:00:00Z",
+            "services": {
+                "ai-agents": {"status": "healthy", "latency_ms": 45},
+            }
+        }
+        
+        with patch.object(metrics_module, 'get_aggregator') as mock_get_agg:
+            mock_aggregator = AsyncMock()
+            mock_aggregator.check_all.return_value = mock_result
+            mock_get_agg.return_value = mock_aggregator
+            
+            with patch.object(metrics_module, 'update_metrics') as mock_update:
+                await metrics_module.collect_metrics()
+                
+                mock_update.assert_called_once_with(mock_result)

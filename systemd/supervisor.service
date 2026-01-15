@@ -1,0 +1,54 @@
+# =============================================================================
+# AI Platform Supervisor systemd Service Unit
+# =============================================================================
+# WBS-LOG1.8: systemd unit file for Linux production deployment
+#
+# Installation:
+#   sudo cp supervisor.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable ai-platform-supervisor
+#   sudo systemctl start ai-platform-supervisor
+#
+# Commands:
+#   sudo systemctl status ai-platform-supervisor
+#   sudo systemctl restart ai-platform-supervisor
+#   journalctl -u ai-platform-supervisor -f
+# =============================================================================
+
+[Unit]
+Description=AI Platform Supervisor - Process Manager for 6 Services
+Documentation=https://github.com/your-org/ai-platform
+After=network.target redis.service docker.service
+Wants=redis.service
+
+[Service]
+Type=forking
+User=kevintoles
+Group=kevintoles
+WorkingDirectory=/Users/kevintoles/POC/platform-cli
+
+# Supervisor commands
+ExecStart=/usr/local/bin/supervisord -c /Users/kevintoles/POC/platform-cli/supervisor/supervisord.conf
+ExecReload=/usr/local/bin/supervisorctl -c /Users/kevintoles/POC/platform-cli/supervisor/supervisord.conf reload
+ExecStop=/usr/local/bin/supervisorctl -c /Users/kevintoles/POC/platform-cli/supervisor/supervisord.conf shutdown
+
+# Ensure clean shutdown
+KillMode=process
+TimeoutStopSec=60
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=65536
+
+# Environment
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+
+# PID file for tracking
+PIDFile=/tmp/supervisord.pid
+
+[Install]
+WantedBy=multi-user.target

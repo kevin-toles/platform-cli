@@ -1,0 +1,269 @@
+"""
+Unit tests for HealthAggregator - WBS-LOG3.1
+
+Tests that the health aggregator:
+- Polls all 6 services
+- Returns correct aggregate status
+- Includes latency measurements
+- Handles service failures gracefully
+
+Technical Debt: HTTP responses mocked here, resolved in WBS-LOG4 (E2E integration)
+"""
+import pytest
+from unittest.mock import AsyncMock, patch, MagicMock
+from datetime import datetime
+import httpx
+
+
+class TestHealthAggregator:
+    """Test suite for HealthAggregator class."""
+
+    @pytest.fixture
+    def service_config(self):
+        """Standard service configuration for tests."""
+        return {
+            "ai-agents": "http://localhost:8082/health",
+            "inference-service": "http://localhost:8085/health",
+            "llm-gateway": "http://localhost:8080/health",
+            "semantic-search": "http://localhost:8081/health",
+            "audit-service": "http://localhost:8084/health",
+            "code-orchestrator": "http://localhost:8083/health",
+        }
+
+    @pytest.fixture
+    def aggregator(self, service_config):
+        """Create HealthAggregator instance."""
+        from src.health_aggregator import HealthAggregator
+        return HealthAggregator(services=service_config)
+
+    @pytest.mark.asyncio
+    async def test_aggregator_polls_all_six_services(self, aggregator, service_config):
+        """AC-LOG3.1: Health aggregator polls all 6 service health statuses."""
+        with patch.object(aggregator, '_check_service', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {"status": "healthy", "latency_ms": 10}
+            
+            result = await aggregator.check_all()
+            
+            # Verify all 6 services were polled
+            assert mock_check.call_count == 6
+            called_services = {call.args[0] for call in mock_check.call_args_list}
+            assert called_services == set(service_config.keys())
+
+    @pytest.mark.asyncio
+    async def test_aggregator_returns_healthy_when_all_services_healthy(self, aggregator):
+        """AC-LOG3.1: Returns 'healthy' status when all services respond."""
+        with patch.object(aggregator, '_check_service', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {"status": "healthy", "latency_ms": 25}
+            
+            result = await aggregator.check_all()
+            
+            assert result["status"] == "healthy"
+            assert "timestamp" in result
+            assert len(result["services"]) == 6
+
+    @pytest.mark.asyncio
+    async def test_aggregator_returns_degraded_when_one_service_unhealthy(self, aggregator):
+        """AC-LOG3.1: Returns 'degraded' when 1-2 services unhealthy."""
+        async def mock_check(service_name, url):
+            if service_name == "code-orchestrator":
+                return {"status": "unhealthy", "error": "connection refused"}
+            return {"status": "healthy", "latency_ms": 25}
+        
+        with patch.object(aggregator, '_check_service', side_effect=mock_check):
+            result = await aggregator.check_all()
+            
+            assert result["status"] == "degraded"
+            assert result["services"]["code-orchestrator"]["status"] == "unhealthy"
+
+    @pytest.mark.asyncio
+    async def test_aggregator_returns_unhealthy_when_majority_services_down(self, aggregator):
+        """AC-LOG3.1: Returns 'unhealthy' when >50% services down."""
+        async def mock_check(service_name, url):
+            if service_name in ["ai-agents", "inference-service", "llm-gateway", "code-orchestrator"]:
+                return {"status": "unhealthy", "error": "connection refused"}
+            return {"status": "healthy", "latency_ms": 25}
+        
+        with patch.object(aggregator, '_check_service', side_effect=mock_check):
+            result = await aggregator.check_all()
+            
+            assert result["status"] == "unhealthy"
+
+    @pytest.mark.asyncio
+    async def test_aggregator_includes_latency_for_healthy_services(self, aggregator):
+        """AC-LOG3.1: Includes latency_ms for healthy services."""
+        with patch.object(aggregator, '_check_service', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {"status": "healthy", "latency_ms": 45}
+            
+            result = await aggregator.check_all()
+            
+            for service_name, service_status in result["services"].items():
+                assert "latency_ms" in service_status
+                assert isinstance(service_status["latency_ms"], (int, float))
+
+    @pytest.mark.asyncio
+    async def test_aggregator_includes_error_for_unhealthy_services(self, aggregator):
+        """AC-LOG3.1: Includes error message for unhealthy services."""
+        async def mock_check(service_name, url):
+            if service_name == "code-orchestrator":
+                return {"status": "unhealthy", "error": "connection refused"}
+            return {"status": "healthy", "latency_ms": 25}
+        
+        with patch.object(aggregator, '_check_service', side_effect=mock_check):
+            result = await aggregator.check_all()
+            
+            assert "error" in result["services"]["code-orchestrator"]
+            assert result["services"]["code-orchestrator"]["error"] == "connection refused"
+
+    @pytest.mark.asyncio
+    async def test_check_service_measures_latency(self, aggregator):
+        """AC-LOG3.1: Service check measures actual latency."""
+        mock_response = MagicMock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {"status": "ok"}
+        
+        with patch('httpx.AsyncClient') as mock_client_class:
+            mock_client = AsyncMock()
+            mock_client.get.return_value = mock_response
+            mock_client.__aenter__.return_value = mock_client
+            mock_client.__aexit__.return_value = None
+            mock_client_class.return_value = mock_client
+            
+            result = await aggregator._check_service("ai-agents", "http://localhost:8082/health")
+            
+            assert result["status"] == "healthy"
+            assert "latency_ms" in result
+            assert result["latency_ms"] >= 0
+
+    @pytest.mark.asyncio
+    async def test_check_service_handles_timeout(self, aggregator):
+        """AC-LOG3.1: Service check handles timeouts gracefully."""
+        with patch('httpx.AsyncClient') as mock_client_class:
+            mock_client = AsyncMock()
+            mock_client.get.side_effect = httpx.TimeoutException("Connection timed out")
+            mock_client.__aenter__.return_value = mock_client
+            mock_client.__aexit__.return_value = None
+            mock_client_class.return_value = mock_client
+            
+            result = await aggregator._check_service("ai-agents", "http://localhost:8082/health")
+            
+            assert result["status"] == "unhealthy"
+            assert "timeout" in result["error"].lower()
+
+    @pytest.mark.asyncio
+    async def test_check_service_handles_connection_error(self, aggregator):
+        """AC-LOG3.1: Service check handles connection errors gracefully."""
+        with patch('httpx.AsyncClient') as mock_client_class:
+            mock_client = AsyncMock()
+            mock_client.get.side_effect = httpx.ConnectError("Connection refused")
+            mock_client.__aenter__.return_value = mock_client
+            mock_client.__aexit__.return_value = None
+            mock_client_class.return_value = mock_client
+            
+            result = await aggregator._check_service("ai-agents", "http://localhost:8082/health")
+            
+            assert result["status"] == "unhealthy"
+            assert "connection" in result["error"].lower()
+
+    @pytest.mark.asyncio
+    async def test_response_includes_iso_timestamp(self, aggregator):
+        """AC-LOG3.1: Response includes ISO 8601 timestamp."""
+        with patch.object(aggregator, '_check_service', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {"status": "healthy", "latency_ms": 10}
+            
+            result = await aggregator.check_all()
+            
+            # Verify timestamp is ISO 8601 format
+            timestamp = result["timestamp"]
+            datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+
+    @pytest.mark.asyncio
+    async def test_concurrent_service_checks(self, aggregator):
+        """AC-LOG3.1: Services are checked concurrently for efficiency."""
+        import asyncio
+        
+        check_times = []
+        
+        async def slow_check(service_name, url):
+            start = asyncio.get_event_loop().time()
+            await asyncio.sleep(0.1)  # 100ms per check
+            check_times.append(asyncio.get_event_loop().time() - start)
+            return {"status": "healthy", "latency_ms": 100}
+        
+        with patch.object(aggregator, '_check_service', side_effect=slow_check):
+            start = asyncio.get_event_loop().time()
+            await aggregator.check_all()
+            total_time = asyncio.get_event_loop().time() - start
+            
+            # If sequential, would take 600ms (6 * 100ms)
+            # If concurrent, should take ~100ms
+            assert total_time < 0.3  # Allow some overhead
+
+
+class TestHealthAggregatorAPI:
+    """Test the FastAPI endpoint for health aggregation."""
+
+    @pytest.fixture
+    def client(self):
+        """Create test client for the health API."""
+        from fastapi.testclient import TestClient
+        from src.health_aggregator import create_app
+        
+        app = create_app()
+        return TestClient(app)
+
+    def test_platform_health_endpoint_exists(self, client):
+        """AC-LOG3.1: /platform/health endpoint is accessible."""
+        with patch('src.health_aggregator.HealthAggregator.check_all', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {
+                "status": "healthy",
+                "timestamp": "2026-01-14T12:00:00Z",
+                "services": {}
+            }
+            
+            response = client.get("/platform/health")
+            
+            assert response.status_code == 200
+
+    def test_platform_health_returns_json(self, client):
+        """AC-LOG3.1: /platform/health returns valid JSON."""
+        with patch('src.health_aggregator.HealthAggregator.check_all', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {
+                "status": "healthy",
+                "timestamp": "2026-01-14T12:00:00Z",
+                "services": {
+                    "ai-agents": {"status": "healthy", "latency_ms": 45}
+                }
+            }
+            
+            response = client.get("/platform/health")
+            data = response.json()
+            
+            assert "status" in data
+            assert "timestamp" in data
+            assert "services" in data
+
+    def test_platform_health_returns_503_when_unhealthy(self, client):
+        """AC-LOG3.1: Returns 503 status code when platform unhealthy."""
+        with patch('src.health_aggregator.HealthAggregator.check_all', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {
+                "status": "unhealthy",
+                "timestamp": "2026-01-14T12:00:00Z",
+                "services": {}
+            }
+            
+            response = client.get("/platform/health")
+            
+            assert response.status_code == 503
+
+    def test_platform_health_returns_200_when_degraded(self, client):
+        """AC-LOG3.1: Returns 200 status code when platform degraded (still functional)."""
+        with patch('src.health_aggregator.HealthAggregator.check_all', new_callable=AsyncMock) as mock_check:
+            mock_check.return_value = {
+                "status": "degraded",
+                "timestamp": "2026-01-14T12:00:00Z",
+                "services": {}
+            }
+            
+            response = client.get("/platform/health")
+            
+            assert response.status_code == 200

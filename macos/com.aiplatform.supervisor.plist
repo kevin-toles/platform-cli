@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+=============================================================================
+AI Platform Supervisor LaunchAgent for macOS
+=============================================================================
+WBS-LOG1.9: macOS LaunchAgent plist for development
+
+Installation:
+  cp com.aiplatform.supervisor.plist ~/Library/LaunchAgents/
+  launchctl load ~/Library/LaunchAgents/com.aiplatform.supervisor.plist
+
+Uninstall:
+  launchctl unload ~/Library/LaunchAgents/com.aiplatform.supervisor.plist
+  rm ~/Library/LaunchAgents/com.aiplatform.supervisor.plist
+
+Commands:
+  launchctl list | grep aiplatform
+  launchctl start com.aiplatform.supervisor
+  launchctl stop com.aiplatform.supervisor
+=============================================================================
+-->
+<plist version="1.0">
+<dict>
+    <!-- Unique identifier for the agent -->
+    <key>Label</key>
+    <string>com.aiplatform.supervisor</string>
+    
+    <!-- Description -->
+    <key>ServiceDescription</key>
+    <string>AI Platform Supervisor - Process Manager for 6 Services</string>
+    
+    <!-- Program and arguments -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/supervisord</string>
+        <string>-n</string>
+        <string>-c</string>
+        <string>/Users/kevintoles/POC/platform-cli/supervisor/supervisord.conf</string>
+    </array>
+    
+    <!-- Working directory -->
+    <key>WorkingDirectory</key>
+    <string>/Users/kevintoles/POC/platform-cli</string>
+    
+    <!-- Run at load (login) -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <!-- Keep alive - restart if it dies -->
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    
+    <!-- Restart throttling -->
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    
+    <!-- Standard output/error logs -->
+    <key>StandardOutPath</key>
+    <string>/Users/kevintoles/Library/Logs/ai-platform/supervisor/launchd_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/kevintoles/Library/Logs/ai-platform/supervisor/launchd_stderr.log</string>
+    
+    <!-- Environment variables -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+        <key>HOME</key>
+        <string>/Users/kevintoles</string>
+    </dict>
+    
+    <!-- Resource limits -->
+    <key>SoftResourceLimits</key>
+    <dict>
+        <key>NumberOfFiles</key>
+        <integer>65536</integer>
+        <key>NumberOfProcesses</key>
+        <integer>2048</integer>
+    </dict>
+    
+    <key>HardResourceLimits</key>
+    <dict>
+        <key>NumberOfFiles</key>
+        <integer>65536</integer>
+        <key>NumberOfProcesses</key>
+        <integer>2048</integer>
+    </dict>
+    
+    <!-- Process type -->
+    <key>ProcessType</key>
+    <string>Background</string>
+    
+    <!-- Nice level (lower priority to not compete with user apps) -->
+    <key>Nice</key>
+    <integer>5</integer>
+</dict>
+</plist>

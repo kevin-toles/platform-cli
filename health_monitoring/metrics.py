@@ -6,6 +6,11 @@ Provides `/metrics` endpoint in standard Prometheus text format.
 
 AC-LOG3.2: Prometheus metrics exported at `/metrics` with `service_health_status` gauge
 
+LOGGING POLICY: Silent operation by default.
+- Prometheus scrapes `/metrics` → updates gauges → no logging
+- Only health_aggregator logs on STATUS CHANGES
+- No per-request logging for routine metric collection
+
 Metrics:
 - service_health_status{service="..."}: 1 = healthy, 0 = unhealthy
 - service_health_latency_ms{service="..."}: Response time in milliseconds
@@ -20,12 +25,16 @@ Usage:
     await collect_metrics()
 """
 import asyncio
+import logging
 from typing import Dict, Any, Optional
 
 from fastapi import FastAPI, Response
 from prometheus_client import Gauge, generate_latest, CONTENT_TYPE_LATEST, CollectorRegistry
 
 from health_monitoring.health_aggregator import HealthAggregator, get_aggregator
+
+# Silence uvicorn access logs for metrics endpoint (very noisy)
+logging.getLogger("uvicorn.access").setLevel(logging.WARNING)
 
 
 # Create a custom registry to allow reset in tests
@@ -174,6 +183,7 @@ class MetricsCollector:
         self.aggregator = aggregator
         self._running = False
         self._task: Optional[asyncio.Task] = None
+        self._logger = logging.getLogger("metrics_collector")
     
     async def start(self) -> None:
         """Start collecting metrics in the background."""
@@ -182,8 +192,8 @@ class MetricsCollector:
             try:
                 await collect_metrics()
             except Exception as e:
-                # Log error but continue collecting
-                print(f"Error collecting metrics: {e}")
+                # Only log errors, not routine operations
+                self._logger.error(f"Error collecting metrics: {e}")
             
             await asyncio.sleep(self.interval_seconds)
     

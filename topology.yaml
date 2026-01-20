@@ -81,6 +81,16 @@ services:
     depends_on:
     - qdrant
     - semantic-search
+  ai-agents:
+    path: ai-agents
+    port: 8082
+    health_endpoint: /health
+    start:
+      docker: docker compose up -d
+      native: source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8082
+    depends_on:
+    - llm-gateway
+    - semantic-search
 
 # Cron jobs for continuous ingestion pipeline
 # WBS-CDP8: Continuous Ingestion Pipeline

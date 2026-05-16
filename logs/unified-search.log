@@ -1,0 +1,317 @@
+INFO:     Started server process [49851]
+INFO:     Waiting for application startup.
+{"timestamp": "2026-05-14T22:54:16.374458+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Starting with REAL database clients"}
+{"timestamp": "2026-05-14T22:54:16.375017+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Creating real services (mode: hybrid)..."}
+{"timestamp": "2026-05-14T22:54:16.375069+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "  Qdrant URL: http://localhost:6333"}
+{"timestamp": "2026-05-14T22:54:16.375108+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "  Neo4j URI: bolt://localhost:7687"}
+{"timestamp": "2026-05-14T22:54:16.375143+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "  Embedding model: all-MiniLM-L6-v2"}
+{"timestamp": "2026-05-14T22:54:16.455101+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Initialized Qdrant client: http://localhost:6333"}
+{"timestamp": "2026-05-14T22:54:16.455360+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Initialized Neo4j driver: bolt://localhost:7687"}
+{"timestamp": "2026-05-14T22:54:16.455411+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Configured SentenceTransformer model: all-MiniLM-L6-v2 (lazy loading)"}
+{"timestamp": "2026-05-14T22:54:16.493169+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Initializing CLIP encoder for image search..."}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 54246.68it/s]
+[1mCLIPModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                  | Status     |  | 
+-------------------------------------+------------+--+-
+vision_model.embeddings.position_ids | UNEXPECTED |  | 
+text_model.embeddings.position_ids   | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+{"timestamp": "2026-05-14T22:54:23.649787+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "CLIP encoder initialized successfully (model: openai/clip-vit-base-patch32)"}
+{"timestamp": "2026-05-14T22:54:23.650213+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Initializing ASCIIDiagramEncoder..."}
+No TrueType monospace font found, using PIL default bitmap font. ASCII diagram rendering may be suboptimal.
+{"timestamp": "2026-05-14T22:54:23.669813+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "ASCIIDiagramEncoder and ASCIIDiagramRetriever initialized successfully"}
+{"timestamp": "2026-05-14T22:54:23.875170+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Failed to initialize FoundationRetriever: 2 validation errors for Settings\nneo4j_url\n  Field required [type=missing, input_value={'UNIFIED_SEARCH_PORT': '...e_real_clients': 'true'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing\nqdrant_url\n  Field required [type=missing, input_value={'UNIFIED_SEARCH_PORT': '...e_real_clients': 'true'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing"}
+{"timestamp": "2026-05-14T22:54:23.885311+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant: connected"}
+{"timestamp": "2026-05-14T22:54:23.896373+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Neo4j: connected"}
+{"timestamp": "2026-05-14T22:54:23.904286+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant 'images' collection verified/created"}
+{"timestamp": "2026-05-14T22:54:23.904594+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant 'ascii_diagrams' collection verified/created"}
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py:2051: RuntimeWarning: coroutine 'AsyncQdrantClient.collection_exists' was never awaited
+  handle = None  # Needed to break cycles when an exception occurs.
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+{"timestamp": "2026-05-14T22:54:30.581589+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "ChapterIdResolver: warm_cache complete"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52569 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52577 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52591 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52621 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52667 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52700 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52708 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52715 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52729 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52740 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52749 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52754 - "GET /health HTTP/1.1" 200 OK
+{"timestamp": "2026-05-14T22:55:32.900998+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Loading SentenceTransformer model: all-MiniLM-L6-v2 (device=cpu)"}
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 6205.93it/s]
+[1mBertModel LOAD REPORT[0m from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+[3mNotes:
+- UNEXPECTED[3m	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.[0m
+{"timestamp": "2026-05-14T22:55:34.856839+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Model loaded in 1.95s"}
+INFO:     127.0.0.1:52761 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52766 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52778 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52785 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52798 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52806 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52816 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52831 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52845 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52859 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52867 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52876 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52889 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52898 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52907 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52914 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52922 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52932 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52942 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52950 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52959 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52968 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52978 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52989 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52997 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53009 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53021 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53030 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53039 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53052 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53062 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53070 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53083 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53096 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53105 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53114 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53123 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53132 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53143 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53152 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53163 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53174 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53185 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53192 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53201 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53209 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53216 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53228 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53236 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53248 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53260 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53273 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53283 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53289 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53297 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53306 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53316 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53324 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53331 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53345 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53353 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53361 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53369 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53377 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53385 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53396 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53414 - "GET /metrics HTTP/1.1" 200 OK
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:02.624726+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 400 (Bad Request)\nRaw response content:\nb'{\"status\":{\"error\":\"Wrong input: Vector dimension error: expected dim: 768, got 384\"},\"time\":0.0023835}'"}
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:02.637140+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 400 (Bad Request)\nRaw response content:\nb'{\"status\":{\"error\":\"Wrong input: Vector dimension error: expected dim: 768, got 384\"},\"time\":0.00018325}'"}
+INFO:     127.0.0.1:53448 - "GET /metrics HTTP/1.1" 200 OK
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:07.127975+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 404 (Not Found)\nRaw response content:\nb'{\"status\":{\"error\":\"Not found: Collection `passages` doesn\\'t exist!\"},\"time\":0.000022916}'"}
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:07.140975+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 404 (Not Found)\nRaw response content:\nb'{\"status\":{\"error\":\"Not found: Collection `passages` doesn\\'t exist!\"},\"time\":8.833e-6}'"}
+INFO:     127.0.0.1:53434 - "POST /v1/search HTTP/1.1" 200 OK
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:13.727906+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 400 (Bad Request)\nRaw response content:\nb'{\"status\":{\"error\":\"Wrong input: Vector dimension error: expected dim: 768, got 384\"},\"time\":0.000220042}'"}
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:14.254815+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 404 (Not Found)\nRaw response content:\nb'{\"status\":{\"error\":\"Not found: Collection `passages` doesn\\'t exist!\"},\"time\":0.000017125}'"}
+INFO:     127.0.0.1:53434 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53480 - "GET /metrics HTTP/1.1" 200 OK
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:25.482097+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 400 (Bad Request)\nRaw response content:\nb'{\"status\":{\"error\":\"Wrong input: Vector dimension error: expected dim: 768, got 384\"},\"time\":0.000314542}'"}
+circuit_breaker_failure
+{"timestamp": "2026-05-14T23:12:26.184395+00:00", "level": "WARNING", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Qdrant search failed: Unexpected Response: 404 (Not Found)\nRaw response content:\nb'{\"status\":{\"error\":\"Not found: Collection `passages` doesn\\'t exist!\"},\"time\":0.000019375}'"}
+INFO:     127.0.0.1:53486 - "POST /v1/search HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53508 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53528 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53541 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53555 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53563 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53572 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53580 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53590 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53598 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53636 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53674 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53684 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53704 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53711 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53716 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53736 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53740 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53754 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53771 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53783 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53795 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53805 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53818 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53839 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53855 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53868 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53880 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53898 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53908 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53926 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53939 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53953 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53963 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53977 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53987 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53997 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54007 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54018 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54030 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54038 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54049 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54061 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54071 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54081 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54096 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54106 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54126 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54135 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54141 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54157 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54173 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54190 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54207 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54243 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54291 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54314 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54532 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54784 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54797 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54809 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54815 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54830 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54840 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54855 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54864 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54877 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54886 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54897 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54913 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54929 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54943 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55014 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55029 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55066 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55087 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55162 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55384 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55531 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55664 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55740 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56159 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56197 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56217 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56369 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56453 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56914 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57255 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57623 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57912 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57990 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58485 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59347 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59868 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60429 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61137 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62165 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62773 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63536 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64257 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65183 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49288 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49603 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49949 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50649 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50720 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50804 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51291 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51509 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52015 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52387 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52534 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52885 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52993 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53162 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53335 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53545 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53858 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54464 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54740 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55140 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55204 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55269 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55446 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55473 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55508 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55538 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55562 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55592 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55615 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55633 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55637 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55667 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55674 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55690 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55699 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55708 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55726 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55730 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55741 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55754 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55766 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55805 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55841 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55849 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55855 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55872 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55881 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55888 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55896 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55913 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55924 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55935 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55943 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55950 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55957 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55966 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55974 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55983 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55992 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56006 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56014 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56027 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56035 - "GET /metrics HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+{"timestamp": "2026-05-14T23:50:44.999107+00:00", "level": "INFO", "service": "unified-search", "correlation_id": "-", "trace_id": "-", "module": "main", "message": "Neo4j driver closed"}
+INFO:     Application shutdown complete.
+INFO:     Finished server process [49851]
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/multiprocessing/resource_tracker.py:324: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-49851-5uogj8zb'}
+  warnings.warn(

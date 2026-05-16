@@ -1,0 +1,422 @@
+INFO:     Started server process [50097]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8087 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52698 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52727 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52736 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52736 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52747 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52747 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52752 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52759 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52773 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52773 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52783 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52783 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52795 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52795 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52804 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52804 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52814 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52814 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52826 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52826 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52841 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52841 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52852 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52852 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52865 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52865 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52873 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52873 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52887 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52887 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52895 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52895 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52905 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52905 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52912 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52912 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52920 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52920 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52926 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52926 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52938 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52938 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52947 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52947 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52957 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52957 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52964 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52964 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52976 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52976 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52983 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52983 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52995 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52995 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53004 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53004 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53019 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53019 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53028 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53028 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53037 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53037 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53044 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53044 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53058 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53058 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53068 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53068 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53079 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53079 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53092 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53092 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53103 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53103 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53112 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53112 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53121 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53121 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53129 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53129 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53141 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53141 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53150 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53150 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53160 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53160 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53171 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53171 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53175 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53183 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53183 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53190 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53190 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53199 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53199 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53207 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53207 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53214 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53214 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53221 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53225 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53225 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53234 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53234 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53241 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53241 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53255 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53255 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53268 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53268 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53280 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53280 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53287 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53287 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53295 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53295 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53303 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53303 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53313 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53313 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53322 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53322 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53329 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53329 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53343 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53343 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53351 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53351 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53359 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53359 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53366 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53366 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53374 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53374 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53383 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53383 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53389 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53389 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53408 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53408 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53439 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53439 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53477 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53477 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53501 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53501 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53525 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53525 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53537 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53537 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53552 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53552 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53560 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53560 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53569 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53569 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53577 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53577 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53579 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53587 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53587 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53595 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53595 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53609 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53609 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53649 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53649 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53682 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53682 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53701 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53701 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53709 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53732 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53732 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53738 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53750 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53750 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53757 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53766 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53769 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53769 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53780 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53780 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53787 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53791 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53791 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53792 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53802 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53802 - "GET /metrics/ HTTP/1.1" 200 OK
+Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:53809 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:53814 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53814 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53832 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53832 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53850 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53850 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53866 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53873 - "GET /tools HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53875 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53875 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53888 - "GET /mcp/sse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53895 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53895 - "GET /metrics/ HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/_utils.py", line 81, in collapse_excgroups
+  |     yield
+  |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    |     result = await app(  # type: ignore[func-returns-value]
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         self.scope, self.receive, self.send
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    |     return await self.app(scope, receive, send)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1138, in __call__
+    |     await super().__call__(scope, receive, send)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    |     raise exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    |     raise app_exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    |     raise app_exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    |     raise app_exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    |     raise app_exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    |     raise app_exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |                                    ~~~~~~~~~~~~~~~~~~^^
+    |   File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    |     self.gen.throw(value)
+    |     ~~~~~~~~~~~~~~^^^^^^^
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+    |     raise exc
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 194, in __call__
+    |     await response(scope, wrapped_receive, send)
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 232, in __call__
+    |     async for chunk in self.body_iterator:
+    |     ...<5 lines>...
+    |         await send({"type": "http.response.body", "body": chunk, "more_body": True})
+    |   File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 178, in body_stream
+    |     assert message["type"] == "http.response.body", f"Unexpected message: {message}"
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | AssertionError: Unexpected message: {'type': 'http.response.start', 'status': 200, 'headers': [(b'content-length', b'0')]}
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/fastapi/applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    raise app_exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    raise app_exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    raise app_exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    raise app_exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 198, in __call__
+    raise app_exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 194, in __call__
+    await response(scope, wrapped_receive, send)
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 232, in __call__
+    async for chunk in self.body_iterator:
+    ...<5 lines>...
+        await send({"type": "http.response.body", "body": chunk, "more_body": True})
+  File "/Users/kevintoles/POC/mcp-gateway/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 178, in body_stream
+    assert message["type"] == "http.response.body", f"Unexpected message: {message}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Unexpected message: {'type': 'http.response.start', 'status': 200, 'headers': [(b'content-length', b'0')]}
+INFO:     127.0.0.1:53905 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53905 - "GET /metrics/ HTTP/1.1" 200 OK
+WARNING:mcp.server.sse:Received invalid session ID: test123
+INFO:     127.0.0.1:53921 - "POST /mcp/messages/?session_id=test123 HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53924 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53924 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53937 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53937 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53950 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53950 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53961 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53961 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53970 - "GET /admin/circuits HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53975 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53975 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53985 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53985 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53993 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53993 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54002 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54002 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54014 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54014 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54026 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54026 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54036 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54036 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54044 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54044 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54058 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54058 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54068 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54068 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54077 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54077 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54089 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54089 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54102 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54102 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54121 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54121 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54132 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54132 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54139 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54139 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54151 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54151 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54169 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54169 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54185 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54185 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54196 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54196 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54220 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54220 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54288 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54288 - "GET /metrics/ HTTP/1.1" 200 OK
+WARNING:mcp.server.sse:Could not find session for ID: 2a2ec2ff-6e52-4648-bc05-f41443c22445
+WARNING:src.middleware.session_recovery:Session 2a2ec2ff6e524648bc05f41443c22445 not found - likely server restart. Client should reconnect via /mcp/sse
+INFO:     127.0.0.1:54298 - "POST /mcp/messages/?session_id=2a2ec2ff6e524648bc05f41443c22445 HTTP/1.1" 410 Gone
+INFO:     127.0.0.1:54308 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54308 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54522 - "GET /metrics HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54522 - "GET /metrics/ HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50097]

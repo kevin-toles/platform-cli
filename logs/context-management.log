@@ -1,0 +1,80 @@
+INFO:     Started server process [50030]
+INFO:     Waiting for application startup.
+{"port": 8086, "log_level": "INFO", "mode": "proxy", "event": "Starting Context Management Service", "level": "info", "timestamp": "2026-05-14T22:55:01.815965Z"}
+{"event": "Validating upstream services...", "level": "info", "timestamp": "2026-05-14T22:55:01.816226Z"}
+{"url": "http://localhost:8085", "error": "inference-service at http://localhost:8085 is unreachable: All connection attempts failed", "event": "Inference service unavailable - local model routing disabled", "level": "warning", "timestamp": "2026-05-14T22:55:01.876076Z"}
+{"url": "http://localhost:8080", "event": "LLM Gateway validated", "level": "info", "timestamp": "2026-05-14T22:55:01.903837Z"}
+InferenceSummarizerClient initialized
+{"inference_url": "http://localhost:8085", "event": "InferenceSummarizerClient initialized for dynamic config discovery", "level": "info", "timestamp": "2026-05-14T22:55:06.689573Z"}
+{"supported_models": ["qwen2.5-7b", "qwen3-coder-30b", "qwen3-8b", "codellama-7b", "deepseek-coder-v2-lite", "llama-3.2-3b"], "dynamic_discovery": true, "port_adapter": false, "event": "TokenManager initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.695180Z"}
+{"event": "TokenManager initialized with dynamic config discovery", "level": "info", "timestamp": "2026-05-14T22:55:06.695257Z"}
+Error getting model info: All connection attempts failed
+{"model": "qwen2.5-7b", "context_limit": 8192, "event": "context_limit_from_inference_service", "level": "info", "timestamp": "2026-05-14T22:55:06.723974Z"}
+Error getting model info: All connection attempts failed
+{"model": "qwen3-coder-30b", "context_limit": 8192, "event": "context_limit_from_inference_service", "level": "info", "timestamp": "2026-05-14T22:55:06.726345Z"}
+Error getting model info: All connection attempts failed
+{"model": "qwen3-8b", "context_limit": 8192, "event": "context_limit_from_inference_service", "level": "info", "timestamp": "2026-05-14T22:55:06.728833Z"}
+Error getting model info: All connection attempts failed
+{"model": "codellama-7b", "context_limit": 8192, "event": "context_limit_from_inference_service", "level": "info", "timestamp": "2026-05-14T22:55:06.730485Z"}
+Error getting model info: All connection attempts failed
+{"model": "deepseek-coder-v2-lite", "context_limit": 8192, "event": "context_limit_from_inference_service", "level": "info", "timestamp": "2026-05-14T22:55:06.732811Z"}
+Error getting model info: All connection attempts failed
+{"model": "llama-3.2-3b", "context_limit": 8192, "event": "context_limit_from_inference_service", "level": "info", "timestamp": "2026-05-14T22:55:06.734115Z"}
+{"success": 6, "failed": 0, "event": "Dynamic config cache pre-warm complete", "level": "info", "timestamp": "2026-05-14T22:55:06.734141Z"}
+Connected to Redis at redis://localhost:6379
+{"redis_url": "redis://localhost:6379", "event": "GlossaryStore initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.736635Z"}
+Added RedisConfigAdapter to chain
+Added InferenceConfigAdapter to chain
+Added YamlConfigAdapter to chain
+ChainedConfigProvider initialized with adapters: ['redis', 'inference', 'yaml']
+ChainedConfigProvider created
+{"adapters": ["redis", "inference", "yaml"], "event": "TokenManager upgraded with ChainedConfigProvider", "level": "info", "timestamp": "2026-05-14T22:55:06.742176Z"}
+Subscribed to Redis channel: model:config:changes
+ConfigSubscriber started on channel model:config:changes
+{"strategies": ["micro_compact", "snip_compact", "constraint_handles", "prose_to_bullets", "symbols", "abbreviations"], "event": "TokenOptimizer initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.751488Z"}
+{"strategies": ["micro_compact", "snip_compact", "constraint_handles", "prose_to_bullets", "symbols", "abbreviations"], "event": "TokenOptimizer initialized with strategies", "level": "info", "timestamp": "2026-05-14T22:55:06.751564Z"}
+{"default_overlap_ratio": 0.1, "event": "ChunkManager initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.751595Z"}
+{"event": "ChunkManager initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.751614Z"}
+{"inference_url": "http://localhost:8085", "event": "FidelityValidator initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.754307Z"}
+[ConfigSubscriber] Listen loop started
+{"upstream_url": "http://localhost:8085", "max_connections": 200, "http2": true, "event": "Connection pool initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.774540Z"}
+{"upstream_url": "http://localhost:8085", "max_connections": 200, "event": "Inference connection pool initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.774621Z"}
+{"upstream_url": "http://localhost:8080", "max_connections": 200, "http2": true, "event": "Gateway connection pool initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.794746Z"}
+{"upstream_url": "http://localhost:8080", "max_connections": 200, "event": "Gateway connection pool initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.794828Z"}
+{"local_patterns": 9, "cloud_patterns": 6, "overrides": 0, "default_target": "cloud", "event": "ModelClassifier initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.796887Z"}
+{"config_path": "config/model_routing.yaml", "local_patterns": 9, "cloud_patterns": 6, "event": "Model classifier initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.796946Z"}
+{"fallback_enabled": true, "event": "DualRouter initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.796972Z"}
+{"fallback_enabled": true, "event": "Dual router initialized (WBS-CMS2)", "level": "info", "timestamp": "2026-05-14T22:55:06.796989Z"}
+{"optimize_threshold": 2, "chunk_threshold": 4, "fallback_on_error": true, "event": "RequestFilter initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797010Z"}
+{"event": "Request filter initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797024Z"}
+{"event": "ResponseFilter initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797037Z"}
+{"event": "Response filter initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797048Z"}
+{"event": "StreamHandler initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797061Z"}
+{"event": "Stream handler initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797071Z"}
+{"parallel": false, "overlap_ratio": 0.1, "merge_strategy": "sequential", "event": "ChunkOrchestrator initialized", "level": "info", "timestamp": "2026-05-14T22:55:06.797093Z"}
+{"parallel": false, "overlap_ratio": 0.1, "event": "Chunk orchestrator initialized (WBS-CMS12)", "level": "info", "timestamp": "2026-05-14T22:55:06.797108Z"}
+{"extra": {"address": "localhost:7233", "namespace": "default"}, "event": "Connecting to Temporal server", "level": "info", "timestamp": "2026-05-14T22:55:07.092352Z"}
+{"event": "Failed to connect to Temporal: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError(\"tcp connect error\", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: \"Connection refused\" })))", "level": "error", "timestamp": "2026-05-14T22:55:07.107978Z"}
+{"error": "Cannot connect to Temporal at localhost:7233: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError(\"tcp connect error\", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: \"Connection refused\" })))", "temporal_address": "localhost:7233", "event": "Temporal worker failed to start - Tier 4 workflows will use sync chunking", "level": "warning", "timestamp": "2026-05-14T22:55:07.108059Z"}
+{"event": "Proxy mode enabled - all components initialized", "level": "info", "timestamp": "2026-05-14T22:55:07.108082Z"}
+dictionary-config not installed — shared dictionary disabled
+{"event": "All service components initialized successfully", "level": "info", "timestamp": "2026-05-14T22:55:07.109007Z"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8086 (Press CTRL+C to quit)
+INFO:     127.0.0.1:52689 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52725 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55642 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55684 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+Config subscriber listen loop cancelled
+ConfigSubscriber stopped
+{"event": "Config subscriber stopped", "level": "info", "timestamp": "2026-05-14T23:50:44.991714Z"}
+{"event": "Connection pool closed", "level": "info", "timestamp": "2026-05-14T23:50:45.025646Z"}
+{"event": "Inference connection pool closed", "level": "info", "timestamp": "2026-05-14T23:50:45.025730Z"}
+{"event": "Gateway connection pool closed", "level": "info", "timestamp": "2026-05-14T23:50:45.038479Z"}
+{"event": "Gateway connection pool closed", "level": "info", "timestamp": "2026-05-14T23:50:45.038560Z"}
+{"event": "LLM client closed", "level": "info", "timestamp": "2026-05-14T23:50:45.038873Z"}
+{"event": "Shutting down Context Management Service", "level": "info", "timestamp": "2026-05-14T23:50:45.039721Z"}
+INFO:     Application shutdown complete.
+INFO:     Finished server process [50030]

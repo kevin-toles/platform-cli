@@ -42,7 +42,7 @@ check_docker_dbs() {
 
 cleanup_ports() {
     log "Cleaning up ports..."
-    for port in 8080 8081 8082 8083 8084 8085; do
+    for port in 8080 8081 8082 8083 8084 8085 8086 8087; do
         lsof -ti :$port 2>/dev/null | xargs kill -9 2>/dev/null || true
     done
     sleep 2
@@ -60,10 +60,11 @@ start_service() {
         return 1
     fi
     
-    cd "$path"
-    source .venv/bin/activate
+    # Activate venv inline so nohup inherits the correct python
+    VENV_PYTHON="$path/.venv/bin/python"
     
-    nohup python -m uvicorn src.main:app --host 0.0.0.0 --port $port > "$LOG_DIR/${name}.log" 2>&1 &
+    cd "$path"
+    nohup "$VENV_PYTHON" -m uvicorn src.main:app --host 0.0.0.0 --port $port > "$LOG_DIR/${name}.log" 2>&1 &
     
     local pid=$!
     echo $pid > "$PID_DIR/${name}.pid"
@@ -78,7 +79,7 @@ start_service() {
         sleep 1
     done
     
-    error "$name FAILED"
+    error "$name FAILED — check $LOG_DIR/${name}.log"
     return 1
 }
 
@@ -92,17 +93,21 @@ start_all() {
     check_docker_dbs
     cleanup_ports
     
-    start_service "llm-gateway" "8080" "$POC_DIR/llm-gateway"
+    start_service "llm-gateway"           "8080" "$POC_DIR/llm-gateway"
     sleep 2
-    start_service "semantic-search" "8081" "$POC_DIR/semantic-search-service"
+    start_service "unified-search"        "8081" "$POC_DIR/unified-search-service"
     sleep 2
-    start_service "inference-service" "8085" "$POC_DIR/inference-service"
+    start_service "ai-agents"             "8082" "$POC_DIR/ai-agents"
     sleep 2
-    start_service "code-orchestrator" "8083" "$POC_DIR/Code-Orchestrator-Service"
+    start_service "code-orchestrator"     "8083" "$POC_DIR/Code-Orchestrator-Service"
     sleep 2
-    start_service "audit-service" "8084" "$POC_DIR/audit-service"
+    start_service "audit-service"         "8084" "$POC_DIR/audit-service"
     sleep 2
-    start_service "ai-agents" "8082" "$POC_DIR/ai-agents"
+    start_service "inference-service"     "8085" "$POC_DIR/inference-service"
+    sleep 2
+    start_service "context-management"    "8086" "$POC_DIR/context-management-service"
+    sleep 2
+    start_service "mcp-gateway"           "8087" "$POC_DIR/mcp-gateway"
     
     echo ""
     show_status
@@ -121,16 +126,16 @@ show_status() {
     echo "║                    PLATFORM STATUS                           ║"
     echo "╚══════════════════════════════════════════════════════════════╝"
     echo ""
-    printf "%-20s %-8s %-10s\n" "SERVICE" "PORT" "STATUS"
+    printf "%-25s %-8s %-10s\n" "SERVICE" "PORT" "STATUS"
     echo "────────────────────────────────────────────"
     
-    for entry in "llm-gateway:8080" "semantic-search:8081" "ai-agents:8082" "code-orchestrator:8083" "audit-service:8084" "inference-service:8085"; do
+    for entry in "llm-gateway:8080" "unified-search:8081" "ai-agents:8082" "code-orchestrator:8083" "audit-service:8084" "inference-service:8085" "context-management:8086" "mcp-gateway:8087"; do
         name="${entry%:*}"
         port="${entry#*:}"
         if curl -s "http://localhost:$port/health" > /dev/null 2>&1; then
-            printf "%-20s %-8s ${GREEN}%-10s${NC}\n" "$name" ":$port" "UP"
+            printf "%-25s %-8s ${GREEN}%-10s${NC}\n" "$name" ":$port" "UP"
         else
-            printf "%-20s %-8s ${RED}%-10s${NC}\n" "$name" ":$port" "DOWN"
+            printf "%-25s %-8s ${RED}%-10s${NC}\n" "$name" ":$port" "DOWN"
         fi
     done
     

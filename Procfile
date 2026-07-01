@@ -19,9 +19,9 @@
 llm_gateway: cd /Users/kevintoles/POC/llm-gateway && source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8080
 
 # Search layer - requires Qdrant healthy
-semantic_search: cd /Users/kevintoles/POC/semantic-search-service && source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8081
+unified_search: cd /Users/kevintoles/POC/unified-search-service && source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8081
 
-# Agents layer - requires semantic-search healthy
+# Agents layer - requires unified-search healthy
 ai_agents: cd /Users/kevintoles/POC/ai-agents && source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8082
 
 # Code orchestrator - requires ai-agents healthy
@@ -32,3 +32,9 @@ audit_service: cd /Users/kevintoles/POC/audit-service && source .venv/bin/activa
 
 # Inference service - requires GPU (Metal on macOS), independent
 inference_service: cd /Users/kevintoles/POC/inference-service && source .venv/bin/activate && INFERENCE_GPU_LAYERS=-1 INFERENCE_MODELS_DIR=/Users/kevintoles/POC/ai-models/models python -m uvicorn src.main:app --host 0.0.0.0 --port 8085
+
+# Context management service - independent
+context_management: cd /Users/kevintoles/POC/context-management-service && source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8086
+
+# MCP Gateway - requires unified-search and code-orchestrator healthy
+mcp_gateway: cd /Users/kevintoles/POC/mcp-gateway && source .venv/bin/activate && python -m uvicorn src.main:app --host 0.0.0.0 --port 8087

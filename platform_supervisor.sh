@@ -73,13 +73,15 @@ init_state_dir() {
 get_service_port() {
     local service="$1"
     case "$service" in
-        llm_gateway)       echo 8080 ;;
-        semantic_search)   echo 8081 ;;
-        ai_agents)         echo 8082 ;;
-        code_orchestrator) echo 8083 ;;
-        audit_service)     echo 8084 ;;
-        inference_service) echo 8085 ;;
-        *)                 echo 0 ;;
+        llm_gateway)        echo 8080 ;;
+        unified_search)     echo 8081 ;;
+        ai_agents)          echo 8082 ;;
+        code_orchestrator)  echo 8083 ;;
+        audit_service)      echo 8084 ;;
+        inference_service)  echo 8085 ;;
+        context_management) echo 8086 ;;
+        mcp_gateway)        echo 8087 ;;
+        *)                  echo 0 ;;
     esac
 }
 
@@ -491,7 +493,7 @@ show_status() {
     echo "-------------------------------------------------------------"
     
     # Get services from state dir or known list
-    local service_list="${SERVICES:-llm_gateway semantic_search ai_agents code_orchestrator audit_service inference_service}"
+    local service_list="${SERVICES:-llm_gateway unified_search ai_agents code_orchestrator audit_service inference_service context_management mcp_gateway}"
     
     for service in $service_list; do
         local pid
